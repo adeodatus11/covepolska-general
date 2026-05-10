@@ -71,12 +71,26 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <link rel="stylesheet" href={`${base}hub.css`} />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href={base} aria-label="COVE Polska – strona główna">
-          <img src={`${base}assets/cove-polska-logo.png`} alt="COVE Polska" />
-        </a>
-        <div class="header-badge">WIN4SMEs</div>
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <div class="logo-strip">
+          <a href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="WIN4SMEs website">
+            <img src={`${base}assets/Logo-2025.png`} alt="WIN4SMEs" />
+          </a>
+          <div class="logo-divider"></div>
+          <a href={base} aria-label="COVE Polska – strona główna">
+            <img src={`${base}assets/cove-polska-logo.png`} alt="COVE Polska" />
+          </a>
+          <div class="logo-divider"></div>
+          <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" target="_blank" rel="noopener noreferrer" aria-label="EU Funding portal">
+            <img src={`${base}assets/PL_Co-fundedbytheEU_RGB_POS.png`} alt="Dofinansowane przez Unię Europejską" id="eu-logo-header" />
+          </a>
+        </div>
+
+        <div class="lang-switch" role="group" aria-label="Language selection">
+          <button class="lang-btn" type="button" aria-pressed="false">EN</button>
+          <button class="lang-btn active" type="button" aria-pressed="true">PL</button>
+        </div>
       </div>
     </header>
 

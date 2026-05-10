@@ -72,46 +72,68 @@ h2 {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
-  border-bottom: 1px solid rgba(220, 229, 241, 0.8);
-  background: rgba(255, 255, 255, 0.86);
-  backdrop-filter: blur(16px);
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
 }
 
 .header-inner {
-  min-height: 76px;
+  width: min(var(--max-width), calc(100% - 32px));
+  min-height: 86px;
+  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
-.brand {
-  display: inline-flex;
+.logo-strip {
+  display: flex;
   align-items: center;
-  min-width: 0;
-  text-decoration: none;
+  gap: 0.9rem;
 }
 
-.brand img {
-  width: min(220px, 58vw);
-  height: auto;
+.logo-strip img {
+  display: block;
+  max-width: 148px;
+  max-height: 54px;
+  object-fit: contain;
 }
 
-.header-badge {
+#eu-logo-header {
+  max-width: 190px;
+}
+
+.logo-divider {
+  width: 1px;
+  height: 34px;
+  background: var(--line);
+}
+
+.lang-switch {
   display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid rgba(17, 103, 216, 0.2);
+  padding: 0.25rem;
+  border: 1px solid var(--line);
   border-radius: 999px;
-  color: var(--navy);
   background: var(--blue-soft);
-  font-size: 0.78rem;
+}
+
+.lang-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.42rem 0.68rem;
+  color: var(--muted);
+  background: transparent;
+  font: inherit;
+  font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
+  cursor: default;
+}
+
+.lang-btn.active {
+  color: #fff;
+  background: #003399;
 }
 
 .hero {
@@ -314,11 +336,26 @@ h1 {
   }
 
   .header-inner {
-    min-height: 68px;
+    min-height: auto;
+    padding: 0.75rem 0;
+    align-items: flex-start;
   }
 
-  .header-badge {
-    display: none;
+  .logo-strip {
+    flex-wrap: wrap;
+  }
+
+  .logo-strip img {
+    max-width: 116px;
+    max-height: 44px;
+  }
+
+  #eu-logo-header {
+    max-width: 160px;
+  }
+
+  .lang-switch {
+    margin-left: auto;
   }
 
   .hero {
