@@ -1,0 +1,20 @@
+---
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+let html = readFileSync(resolve("cove-polska.html"), "utf-8");
+
+html = html
+  .replace('<body>', '<body id="top">')
+  .replace('<section class="cove-about" aria-labelledby="cove-about-heading">', '<section id="about" class="cove-about" aria-labelledby="cove-about-heading">')
+  .replace('<section class="partners-section" aria-labelledby="partners-heading">', '<section id="partners" class="partners-section" aria-labelledby="partners-heading">')
+  .replaceAll('href="index.html#about"', 'href="#about"')
+  .replaceAll('href="index.html#methodology"', 'href="#partners"')
+  .replaceAll('href="index.html"', 'href="#top"')
+  .replaceAll('href="cove-polska.html"', 'href="#top"')
+  .replace('href="https://covepolska.pl" target="_blank" rel="noopener noreferrer" class="cove-hero-btn"', 'href="#about" class="cove-hero-btn"')
+  .replaceAll("Odwiedź stronę COVE Polska", "Poznaj COVE Polska")
+  .replaceAll("Visit COVE Polska website", "Explore COVE Polska");
+---
+
+<Fragment set:html={html} />
