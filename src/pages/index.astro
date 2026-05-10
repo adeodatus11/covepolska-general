@@ -1,129 +1,20 @@
 ---
-const hubs = [
-  {
-    title: "AI w edukacji i pracy",
-    url: "https://ai.covepolska.pl",
-    image: "assets/ai_cove.png",
-    alt: "Osoby pracujące przy laptopach podczas szkolenia ze sztucznej inteligencji",
-    eyebrow: "Sztuczna inteligencja",
-    lead:
-      "Praktyczny kurs wykorzystania sztucznej inteligencji w edukacji i pracy. Od podstaw po konkretne narzędzia i scenariusze zastosowań – do samodzielnego przejścia, we własnym tempie."
-  },
-  {
-    title: "Innowacje w MŚP",
-    url: "https://innowacje.covepolska.pl",
-    image: "assets/innowacje_cove.png",
-    alt: "Zespół omawiający strategię cyfrową przy tablicy warsztatowej",
-    eyebrow: "Rozwiązania dla firm",
-    lead:
-      "Sprawdzone innowacje z sektora MŚP – konkretne rozwiązania, które działają w praktyce. Inspiracje dla firm, szkół i instytucji, które chcą rozwijać kompetencje i efektywność."
-  },
-  {
-    title: "Mentoring nauczycieli",
-    url: "https://mentor.covepolska.pl",
-    image: "assets/mentor_cove.png",
-    alt: "Mentorka i nauczycielka początkująca pracujące z dokumentami w sali lekcyjnej",
-    eyebrow: "Rozwój nauczycieli",
-    lead:
-      "Narzędzie wspierające proces wdrożenia nauczyciela – od pierwszych dni w szkole po świadomy rozwój zawodowy. Praktyczne materiały dla mentorów i nauczycieli początkujących."
-  },
-  {
-    title: "Taniroda – firma ćwiczebna",
-    url: "https://taniroda.covepolska.pl",
-    image: "assets/taniroda_cove.png",
-    alt: "Uczniowie pracujący zespołowo nad biznesplanem w sali lekcyjnej",
-    eyebrow: "Przedsiębiorczość w praktyce",
-    lead:
-      "Model firmy ćwiczebnej Taniroda – praktyczna nauka biznesu w warunkach szkolnych. Symulacja realnych procesów, rozwój kompetencji przedsiębiorczych i pracy zespołowej."
-  }
-];
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+let html = readFileSync(resolve("cove-polska.html"), "utf-8");
+
+html = html
+  .replace('<body>', '<body id="top">')
+  .replace('<section class="cove-about" aria-labelledby="cove-about-heading">', '<section id="about" class="cove-about" aria-labelledby="cove-about-heading">')
+  .replace('<section class="partners-section" aria-labelledby="partners-heading">', '<section id="partners" class="partners-section" aria-labelledby="partners-heading">')
+  .replaceAll('href="index.html#about"', 'href="#about"')
+  .replaceAll('href="index.html#methodology"', 'href="#partners"')
+  .replaceAll('href="index.html"', 'href="#top"')
+  .replaceAll('href="cove-polska.html"', 'href="#top"')
+  .replace('href="https://covepolska.pl" target="_blank" rel="noopener noreferrer" class="cove-hero-btn"', 'href="#about" class="cove-hero-btn"')
+  .replaceAll("Odwiedź stronę COVE Polska", "Poznaj COVE Polska")
+  .replaceAll("Visit COVE Polska website", "Explore COVE Polska");
 ---
 
-<!doctype html>
-<html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COVE Polska – przestrzeń wiedzy, innowacji i rozwoju</title>
-    <meta
-      name="description"
-      content="Hub COVE Polska prowadzący do zasobów o sztucznej inteligencji, innowacjach w MŚP, mentoringu nauczycieli i firmie ćwiczebnej Taniroda."
-    />
-    <meta property="og:title" content="COVE Polska – przestrzeń wiedzy, innowacji i rozwoju" />
-    <meta
-      property="og:description"
-      content="Poznaj praktyczne zasoby przygotowane w ramach działań COVE Polska i WIN4SMEs."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://covepolska.pl/" />
-    <meta property="og:image" content="https://covepolska.pl/assets/cove-polska-logo.png" />
-    <meta name="theme-color" content="#0d2b66" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="/" aria-label="COVE Polska – strona główna">
-          <img src="assets/cove-polska-logo.png" alt="COVE Polska" />
-        </a>
-        <div class="header-badge">WIN4SMEs</div>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero" aria-labelledby="main-heading">
-        <div class="container hero-inner">
-          <p class="section-kicker">Hub projektowy</p>
-          <h1 id="main-heading">COVE Polska – przestrzeń wiedzy, innowacji i rozwoju</h1>
-          <p class="hero-lead">
-            Poznaj praktyczne zasoby przygotowane w ramach działań COVE Polska i WIN4SMEs.
-            Wybierz obszar, który Cię interesuje: sztuczna inteligencja, innowacje w MŚP,
-            mentoring nauczycieli albo firma ćwiczebna Taniroda.
-          </p>
-        </div>
-      </section>
-
-      <section class="hub-section" aria-label="Podstrony COVE Polska">
-        <div class="container hub-grid">
-          {
-            hubs.map((hub) => (
-              <article class="hub-card">
-                <a class="hub-media-link" href={hub.url} aria-label={`Przejdź do strony: ${hub.title}`}>
-                  <img class="hub-image" src={hub.image} alt={hub.alt} loading="lazy" />
-                </a>
-                <div class="hub-content">
-                  <p class="hub-eyebrow">{hub.eyebrow}</p>
-                  <h2>{hub.title}</h2>
-                  <p>{hub.lead}</p>
-                  <a class="button" href={hub.url}>
-                    Przejdź do strony
-                    <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </article>
-            ))
-          }
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-logos" aria-label="Logotypy projektu i finansowania">
-          <img src="assets/Logo-2025.png" alt="WIN4SMEs" />
-          <img src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Współfinansowane przez Unię Europejską" />
-        </div>
-        <p>
-          COVE Polska działa w ramach projektu WIN4SMEs – Workplace Innovation for SMEs.
-          Strona prowadzi do wybranych zasobów edukacyjnych i projektowych.
-        </p>
-      </div>
-    </footer>
-  </body>
-</html>
+<Fragment set:html={html} />

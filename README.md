@@ -1,13 +1,17 @@
-# COVE Polska hub
+# COVE Polska general
 
-Statyczny hub projektu COVE Polska / WIN4SMEs prowadzący do czterech podstron:
+Statyczna strona projektu COVE Polska / WIN4SMEs.
 
-- `https://ai.covepolska.pl`
-- `https://innowacje.covepolska.pl`
-- `https://mentor.covepolska.pl`
-- `https://taniroda.covepolska.pl`
+## Struktura
 
-Główna strona znajduje się w `src/pages/index.astro`, style w `public/styles.css`, a ilustracje kafelków w `public/assets/`.
+- `/` – główna strona projektu COVE Polska.
+- `/nasze-dzialania/` – hub prowadzący do czterech podstron:
+  - `https://ai.covepolska.pl`
+  - `https://innowacje.covepolska.pl`
+  - `https://mentor.covepolska.pl`
+  - `https://taniroda.covepolska.pl`
+
+Główna strona korzysta z `cove-polska.html` i `public/styles.css`. Hub działa jako osobna podstrona `src/pages/nasze-dzialania.astro` z osobnym arkuszem `public/hub.css`.
 
 ## Uruchomienie lokalne
 
