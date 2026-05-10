@@ -1,0 +1,222 @@
+---
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt – COVE Polska</title>
+    <meta
+      name="description"
+      content="Kontakt do COVE Polska: adres e-mail, siedziba Dolnośląskiej Izby Rzemieślniczej i koordynator działań."
+    />
+    <meta property="og:title" content="Kontakt – COVE Polska" />
+    <meta property="og:description" content="Skontaktuj się z zespołem COVE Polska." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://covepolska.pl/kontakt/" />
+    <meta property="og:image" content="https://covepolska.pl/assets/cove-polska-logo.png" />
+    <meta name="theme-color" content="#0d2b66" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href={`${base}hub.css`} />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <div class="logo-strip">
+          <a href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="WIN4SMEs website">
+            <img src={`${base}assets/Logo-2025.png`} alt="WIN4SMEs" />
+          </a>
+          <div class="logo-divider"></div>
+          <a href={base} aria-label="COVE Polska – strona główna">
+            <img src={`${base}assets/cove-polska-logo.png`} alt="COVE Polska" />
+          </a>
+          <div class="logo-divider"></div>
+          <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" target="_blank" rel="noopener noreferrer" aria-label="EU Funding portal">
+            <img src={`${base}assets/PL_Co-fundedbytheEU_RGB_POS.png`} alt="Dofinansowane przez Unię Europejską" id="eu-logo-header" />
+          </a>
+        </div>
+
+        <nav class="header-nav" aria-label="Main navigation">
+          <a href={`${base}#about`} data-i18n="nav_about">O projekcie</a>
+          <a href={`${base}#partners`} data-i18n="nav_partners">Partnerzy</a>
+          <a href="https://news.covepolska.pl" data-i18n="nav_news">Aktualności</a>
+          <a href={`${base}nasze-dzialania/`} data-i18n="nav_offer">Nasza oferta</a>
+          <a href={`${base}kontakt/`} class="active" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
+        <div class="lang-switch" role="group" aria-label="Language selection">
+          <button class="lang-btn" id="btn-en" type="button" aria-pressed="false">EN</button>
+          <button class="lang-btn active" id="btn-pl" type="button" aria-pressed="true">PL</button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href={`${base}#about`} data-i18n="nav_about">O projekcie</a>
+      <a href={`${base}#partners`} data-i18n="nav_partners">Partnerzy</a>
+      <a href="https://news.covepolska.pl" data-i18n="nav_news">Aktualności</a>
+      <a href={`${base}nasze-dzialania/`} data-i18n="nav_offer">Nasza oferta</a>
+      <a href={`${base}kontakt/`} class="active" data-i18n="nav_contact">Kontakt</a>
+    </nav>
+
+    <main>
+      <section class="hero contact-hero" aria-labelledby="contact-heading">
+        <div class="container hero-inner">
+          <p class="section-kicker" data-i18n="contact_kicker">Kontakt</p>
+          <h1 id="contact-heading" data-i18n="contact_h1">Skontaktuj się z COVE Polska</h1>
+          <p class="hero-lead" data-i18n="contact_lead">
+            Masz pytanie o działania COVE Polska, współpracę albo materiały projektowe? Skorzystaj z danych kontaktowych poniżej.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section" aria-label="Dane kontaktowe">
+        <div class="container contact-grid">
+          <article class="contact-card primary">
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <p class="contact-label" data-i18n="email_label">Adres e-mail</p>
+            <h2>kontakt@covepolska.pl</h2>
+            <a class="button" href="mailto:kontakt@covepolska.pl">
+              <span data-i18n="email_button">Napisz do nas</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <span class="contact-icon" aria-hidden="true">⌂</span>
+            <p class="contact-label" data-i18n="office_label">Siedziba</p>
+            <h2 data-i18n="office_name">Dolnośląska Izba Rzemieślnicza we Wrocławiu</h2>
+            <p>
+              Plac Solny 13<br />
+              50-061 Wrocław
+            </p>
+          </article>
+
+          <article class="contact-card contact-wide">
+            <span class="contact-icon" aria-hidden="true">◎</span>
+            <p class="contact-label" data-i18n="coordinator_label">Koordynator działań</p>
+            <h2>Maciej Najwer</h2>
+            <div class="contact-links">
+              <a href="mailto:kontakt@covepolska.pl">kontakt@covepolska.pl</a>
+              <a href="tel:+48609625743">+48 609 625 743</a>
+            </div>
+          </article>
+
+          <article class="contact-card wroclaw-card">
+            <p class="contact-label" data-i18n="city_label">Miasto Wrocław</p>
+            <a href="https://www.wroclaw.pl/" target="_blank" rel="noopener noreferrer">
+              <img id="wroclaw-logo-card" src={`${base}assets/wroclaw-miasto-spotkan.png`} alt="Wrocław Miasto Spotkań" />
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-logos" aria-label="Logotypy projektu i finansowania">
+          <img src={`${base}assets/Logo-2025.png`} alt="WIN4SMEs" />
+          <img id="eu-logo-footer" src={`${base}assets/PL_Co-fundedbytheEU_RGB_POS.png`} alt="Współfinansowane przez Unię Europejską" />
+          <a href="https://www.wroclaw.pl/" target="_blank" rel="noopener noreferrer" aria-label="Wrocław website">
+            <img class="wroclaw-logo" id="wroclaw-logo-footer" src={`${base}assets/wroclaw-miasto-spotkan.png`} alt="Wrocław Miasto Spotkań" />
+          </a>
+        </div>
+        <p data-i18n="footer_note">
+          COVE Polska działa w ramach projektu WIN4SMEs – Workplace Innovation for SMEs.
+          Strona prowadzi do wybranych zasobów edukacyjnych i projektowych.
+        </p>
+      </div>
+    </footer>
+
+    <script define:vars={{ base }}>
+      const I18N = {
+        pl: {
+          nav_about: "O projekcie",
+          nav_partners: "Partnerzy",
+          nav_news: "Aktualności",
+          nav_offer: "Nasza oferta",
+          nav_contact: "Kontakt",
+          contact_kicker: "Kontakt",
+          contact_h1: "Skontaktuj się z COVE Polska",
+          contact_lead: "Masz pytanie o działania COVE Polska, współpracę albo materiały projektowe? Skorzystaj z danych kontaktowych poniżej.",
+          email_label: "Adres e-mail",
+          email_button: "Napisz do nas",
+          office_label: "Siedziba",
+          office_name: "Dolnośląska Izba Rzemieślnicza we Wrocławiu",
+          coordinator_label: "Koordynator działań",
+          city_label: "Miasto Wrocław",
+          footer_note: "COVE Polska działa w ramach projektu WIN4SMEs – Workplace Innovation for SMEs. Strona prowadzi do wybranych zasobów edukacyjnych i projektowych."
+        },
+        en: {
+          nav_about: "About project",
+          nav_partners: "Partners",
+          nav_news: "News",
+          nav_offer: "Our offer",
+          nav_contact: "Contact",
+          contact_kicker: "Contact",
+          contact_h1: "Contact COVE Polska",
+          contact_lead: "Do you have a question about COVE Polska activities, cooperation or project materials? Use the contact details below.",
+          email_label: "Email address",
+          email_button: "Email us",
+          office_label: "Office",
+          office_name: "Lower Silesian Chamber of Crafts in Wrocław",
+          coordinator_label: "Activity coordinator",
+          city_label: "City of Wrocław",
+          footer_note: "COVE Polska operates within the WIN4SMEs – Workplace Innovation for SMEs project. This page leads to selected educational and project resources."
+        }
+      };
+
+      function setLang(lang) {
+        document.documentElement.setAttribute("lang", lang);
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.dataset.i18n;
+          if (I18N[lang][key]) el.textContent = I18N[lang][key];
+        });
+        document.getElementById("btn-pl").classList.toggle("active", lang === "pl");
+        document.getElementById("btn-en").classList.toggle("active", lang === "en");
+        document.getElementById("btn-pl").setAttribute("aria-pressed", lang === "pl");
+        document.getElementById("btn-en").setAttribute("aria-pressed", lang === "en");
+        const src = lang === "pl" ? `${base}assets/wroclaw-miasto-spotkan.png` : `${base}assets/wroclaw-miasto-spotkan-eng.png`;
+        const alt = lang === "pl" ? "Wrocław Miasto Spotkań" : "Wrocław the Meeting Place";
+        document.querySelectorAll("#wroclaw-logo-footer, #wroclaw-logo-card").forEach((img) => {
+          img.src = src;
+          img.alt = alt;
+        });
+        const euHeader = document.getElementById("eu-logo-header");
+        const euFooter = document.getElementById("eu-logo-footer");
+        const euSrc = lang === "pl" ? `${base}assets/PL_Co-fundedbytheEU_RGB_POS.png` : `${base}assets/EN_Co-fundedbytheEU_RGB_POS.png`;
+        if (euHeader) {
+          euHeader.src = euSrc;
+          euHeader.alt = lang === "pl" ? "Dofinansowane przez Unię Europejską" : "Co-funded by the European Union";
+        }
+        if (euFooter) {
+          euFooter.src = euSrc;
+          euFooter.alt = lang === "pl" ? "Współfinansowane przez Unię Europejską" : "Co-funded by the European Union";
+        }
+      }
+
+      document.getElementById("btn-pl").addEventListener("click", () => setLang("pl"));
+      document.getElementById("btn-en").addEventListener("click", () => setLang("en"));
+      document.getElementById("hamburger-btn").addEventListener("click", () => {
+        const nav = document.getElementById("mobile-nav");
+        const isOpen = nav.classList.toggle("open");
+        document.getElementById("hamburger-btn").setAttribute("aria-expanded", isOpen);
+      });
+    </script>
+  </body>
+</html>

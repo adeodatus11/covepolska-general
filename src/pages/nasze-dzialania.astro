@@ -2,39 +2,59 @@
 const hubs = [
   {
     title: "AI w edukacji i pracy",
+    titleEn: "AI in Education and Work",
     url: "https://ai.covepolska.pl",
     image: "assets/ai_cove.png",
     alt: "Osoby pracujące przy laptopach podczas szkolenia ze sztucznej inteligencji",
+    altEn: "People working with laptops during an artificial intelligence training session",
     eyebrow: "Sztuczna inteligencja",
+    eyebrowEn: "Artificial intelligence",
     lead:
-      "Praktyczny kurs wykorzystania sztucznej inteligencji w edukacji i pracy. Od podstaw po konkretne narzędzia i scenariusze zastosowań – do samodzielnego przejścia, we własnym tempie."
+      "Praktyczny kurs wykorzystania sztucznej inteligencji w edukacji i pracy. Od podstaw po konkretne narzędzia i scenariusze zastosowań – do samodzielnego przejścia, we własnym tempie.",
+    leadEn:
+      "A practical course on using artificial intelligence in education and work. From the basics to specific tools and use scenarios, designed for self-paced learning."
   },
   {
     title: "Innowacje w MŚP",
+    titleEn: "Innovation in SMEs",
     url: "https://innowacje.covepolska.pl",
     image: "assets/innowacje_cove.png",
     alt: "Zespół omawiający strategię cyfrową przy tablicy warsztatowej",
+    altEn: "A team discussing digital strategy at a workshop board",
     eyebrow: "Rozwiązania dla firm",
+    eyebrowEn: "Solutions for companies",
     lead:
-      "Sprawdzone innowacje z sektora MŚP – konkretne rozwiązania, które działają w praktyce. Inspiracje dla firm, szkół i instytucji, które chcą rozwijać kompetencje i efektywność."
+      "Sprawdzone innowacje z sektora MŚP – konkretne rozwiązania, które działają w praktyce. Inspiracje dla firm, szkół i instytucji, które chcą rozwijać kompetencje i efektywność.",
+    leadEn:
+      "Proven innovations from the SME sector: specific solutions that work in practice. Inspiration for companies, schools and institutions that want to develop skills and improve effectiveness."
   },
   {
     title: "Mentoring nauczycieli",
+    titleEn: "Teacher Mentoring",
     url: "https://mentor.covepolska.pl",
     image: "assets/mentor_cove.png",
     alt: "Mentorka i nauczycielka początkująca pracujące z dokumentami w sali lekcyjnej",
+    altEn: "A mentor and a beginning teacher working with documents in a classroom",
     eyebrow: "Rozwój nauczycieli",
+    eyebrowEn: "Teacher development",
     lead:
-      "Narzędzie wspierające proces wdrożenia nauczyciela – od pierwszych dni w szkole po świadomy rozwój zawodowy. Praktyczne materiały dla mentorów i nauczycieli początkujących."
+      "Narzędzie wspierające proces wdrożenia nauczyciela – od pierwszych dni w szkole po świadomy rozwój zawodowy. Praktyczne materiały dla mentorów i nauczycieli początkujących.",
+    leadEn:
+      "A tool supporting teacher induction, from the first days at school to conscious professional development. Practical materials for mentors and beginning teachers."
   },
   {
     title: "Taniroda – firma ćwiczebna",
+    titleEn: "Taniroda Practice Enterprise",
     url: "https://taniroda.covepolska.pl",
     image: "assets/taniroda_cove.png",
     alt: "Uczniowie pracujący zespołowo nad biznesplanem w sali lekcyjnej",
+    altEn: "Students working as a team on a business plan in a classroom",
     eyebrow: "Przedsiębiorczość w praktyce",
+    eyebrowEn: "Entrepreneurship in practice",
     lead:
-      "Model firmy ćwiczebnej Taniroda – praktyczna nauka biznesu w warunkach szkolnych. Symulacja realnych procesów, rozwój kompetencji przedsiębiorczych i pracy zespołowej."
+      "Model firmy ćwiczebnej Taniroda – praktyczna nauka biznesu w warunkach szkolnych. Symulacja realnych procesów, rozwój kompetencji przedsiębiorczych i pracy zespołowej.",
+    leadEn:
+      "The Taniroda practice enterprise model: practical business learning in a school environment. Simulation of real processes, development of entrepreneurial skills and teamwork."
   }
 ];
 
@@ -48,12 +68,12 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COVE Polska – przestrzeń wiedzy, innowacji i rozwoju</title>
+    <title>Nasza oferta – COVE Polska</title>
     <meta
       name="description"
       content="Hub COVE Polska prowadzący do zasobów o sztucznej inteligencji, innowacjach w MŚP, mentoringu nauczycieli i firmie ćwiczebnej Taniroda."
     />
-    <meta property="og:title" content="COVE Polska – przestrzeń wiedzy, innowacji i rozwoju" />
+    <meta property="og:title" content="Nasza oferta – COVE Polska" />
     <meta
       property="og:description"
       content="Poznaj praktyczne zasoby przygotowane w ramach działań COVE Polska i WIN4SMEs."
@@ -87,19 +107,41 @@ const base = import.meta.env.BASE_URL.endsWith("/")
           </a>
         </div>
 
+        <nav class="header-nav" aria-label="Main navigation">
+          <a href={`${base}#about`} data-i18n="nav_about">O projekcie</a>
+          <a href={`${base}#partners`} data-i18n="nav_partners">Partnerzy</a>
+          <a href="https://news.covepolska.pl" data-i18n="nav_news">Aktualności</a>
+          <a href={`${base}nasze-dzialania/`} class="active" data-i18n="nav_offer">Nasza oferta</a>
+          <a href={`${base}kontakt/`} data-i18n="nav_contact">Kontakt</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
         <div class="lang-switch" role="group" aria-label="Language selection">
-          <button class="lang-btn" type="button" aria-pressed="false">EN</button>
-          <button class="lang-btn active" type="button" aria-pressed="true">PL</button>
+          <button class="lang-btn" id="btn-en" type="button" aria-pressed="false">EN</button>
+          <button class="lang-btn active" id="btn-pl" type="button" aria-pressed="true">PL</button>
         </div>
       </div>
     </header>
 
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href={`${base}#about`} data-i18n="nav_about">O projekcie</a>
+      <a href={`${base}#partners`} data-i18n="nav_partners">Partnerzy</a>
+      <a href="https://news.covepolska.pl" data-i18n="nav_news">Aktualności</a>
+      <a href={`${base}nasze-dzialania/`} class="active" data-i18n="nav_offer">Nasza oferta</a>
+      <a href={`${base}kontakt/`} data-i18n="nav_contact">Kontakt</a>
+    </nav>
+
     <main>
       <section class="hero" aria-labelledby="main-heading">
         <div class="container hero-inner">
-          <p class="section-kicker">Hub projektowy</p>
-          <h1 id="main-heading">COVE Polska – przestrzeń wiedzy, innowacji i rozwoju</h1>
-          <p class="hero-lead">
+          <p class="section-kicker" data-i18n="offer_kicker">Nasza oferta</p>
+          <h1 id="main-heading" data-i18n="offer_h1">COVE Polska – przestrzeń wiedzy, innowacji i rozwoju</h1>
+          <p class="hero-lead" data-i18n="offer_lead">
             Poznaj praktyczne zasoby przygotowane w ramach działań COVE Polska i WIN4SMEs.
             Wybierz obszar, który Cię interesuje: sztuczna inteligencja, innowacje w MŚP,
             mentoring nauczycieli albo firma ćwiczebna Taniroda.
@@ -113,14 +155,14 @@ const base = import.meta.env.BASE_URL.endsWith("/")
             hubs.map((hub) => (
               <article class="hub-card">
                 <a class="hub-media-link" href={hub.url} aria-label={`Przejdź do strony: ${hub.title}`}>
-                  <img class="hub-image" src={`${base}${hub.image}`} alt={hub.alt} loading="lazy" />
+                  <img class="hub-image" src={`${base}${hub.image}`} alt={hub.alt} data-alt-pl={hub.alt} data-alt-en={hub.altEn} loading="lazy" />
                 </a>
                 <div class="hub-content">
-                  <p class="hub-eyebrow">{hub.eyebrow}</p>
-                  <h2>{hub.title}</h2>
-                  <p>{hub.lead}</p>
+                  <p class="hub-eyebrow" data-pl={hub.eyebrow} data-en={hub.eyebrowEn}>{hub.eyebrow}</p>
+                  <h2 data-pl={hub.title} data-en={hub.titleEn}>{hub.title}</h2>
+                  <p data-pl={hub.lead} data-en={hub.leadEn}>{hub.lead}</p>
                   <a class="button" href={hub.url}>
-                    Przejdź do strony
+                    <span data-i18n="button_visit">Przejdź do strony</span>
                     <span aria-hidden="true">→</span>
                   </a>
                 </div>
@@ -135,13 +177,87 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <div class="container footer-inner">
         <div class="footer-logos" aria-label="Logotypy projektu i finansowania">
           <img src={`${base}assets/Logo-2025.png`} alt="WIN4SMEs" />
-          <img src={`${base}assets/PL_Co-fundedbytheEU_RGB_POS.png`} alt="Współfinansowane przez Unię Europejską" />
+          <img id="eu-logo-footer" src={`${base}assets/PL_Co-fundedbytheEU_RGB_POS.png`} alt="Współfinansowane przez Unię Europejską" />
+          <a href="https://www.wroclaw.pl/" target="_blank" rel="noopener noreferrer" aria-label="Wrocław website">
+            <img class="wroclaw-logo" id="wroclaw-logo-footer" src={`${base}assets/wroclaw-miasto-spotkan.png`} alt="Wrocław Miasto Spotkań" />
+          </a>
         </div>
-        <p>
+        <p data-i18n="footer_note">
           COVE Polska działa w ramach projektu WIN4SMEs – Workplace Innovation for SMEs.
           Strona prowadzi do wybranych zasobów edukacyjnych i projektowych.
         </p>
       </div>
     </footer>
+
+    <script define:vars={{ base }}>
+      const I18N = {
+        pl: {
+          nav_about: "O projekcie",
+          nav_partners: "Partnerzy",
+          nav_news: "Aktualności",
+          nav_offer: "Nasza oferta",
+          nav_contact: "Kontakt",
+          offer_kicker: "Nasza oferta",
+          offer_h1: "COVE Polska – przestrzeń wiedzy, innowacji i rozwoju",
+          offer_lead: "Poznaj praktyczne zasoby przygotowane w ramach działań COVE Polska i WIN4SMEs. Wybierz obszar, który Cię interesuje: sztuczna inteligencja, innowacje w MŚP, mentoring nauczycieli albo firma ćwiczebna Taniroda.",
+          button_visit: "Przejdź do strony",
+          footer_note: "COVE Polska działa w ramach projektu WIN4SMEs – Workplace Innovation for SMEs. Strona prowadzi do wybranych zasobów edukacyjnych i projektowych."
+        },
+        en: {
+          nav_about: "About project",
+          nav_partners: "Partners",
+          nav_news: "News",
+          nav_offer: "Our offer",
+          nav_contact: "Contact",
+          offer_kicker: "Our offer",
+          offer_h1: "COVE Polska – knowledge, innovation and development",
+          offer_lead: "Explore practical resources prepared as part of COVE Polska and WIN4SMEs activities. Choose the area that interests you: artificial intelligence, SME innovation, teacher mentoring or the Taniroda practice enterprise.",
+          button_visit: "Visit website",
+          footer_note: "COVE Polska operates within the WIN4SMEs – Workplace Innovation for SMEs project. This page leads to selected educational and project resources."
+        }
+      };
+
+      function setLang(lang) {
+        document.documentElement.setAttribute("lang", lang);
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.dataset.i18n;
+          if (I18N[lang][key]) el.textContent = I18N[lang][key];
+        });
+        document.querySelectorAll("[data-pl][data-en]").forEach((el) => {
+          el.textContent = el.dataset[lang];
+        });
+        document.querySelectorAll("[data-alt-pl][data-alt-en]").forEach((img) => {
+          img.alt = lang === "pl" ? img.dataset.altPl : img.dataset.altEn;
+        });
+        document.getElementById("btn-pl").classList.toggle("active", lang === "pl");
+        document.getElementById("btn-en").classList.toggle("active", lang === "en");
+        document.getElementById("btn-pl").setAttribute("aria-pressed", lang === "pl");
+        document.getElementById("btn-en").setAttribute("aria-pressed", lang === "en");
+        const wroclaw = document.getElementById("wroclaw-logo-footer");
+        if (wroclaw) {
+          wroclaw.src = lang === "pl" ? `${base}assets/wroclaw-miasto-spotkan.png` : `${base}assets/wroclaw-miasto-spotkan-eng.png`;
+          wroclaw.alt = lang === "pl" ? "Wrocław Miasto Spotkań" : "Wrocław the Meeting Place";
+        }
+        const euHeader = document.getElementById("eu-logo-header");
+        const euFooter = document.getElementById("eu-logo-footer");
+        const euSrc = lang === "pl" ? `${base}assets/PL_Co-fundedbytheEU_RGB_POS.png` : `${base}assets/EN_Co-fundedbytheEU_RGB_POS.png`;
+        if (euHeader) {
+          euHeader.src = euSrc;
+          euHeader.alt = lang === "pl" ? "Dofinansowane przez Unię Europejską" : "Co-funded by the European Union";
+        }
+        if (euFooter) {
+          euFooter.src = euSrc;
+          euFooter.alt = lang === "pl" ? "Współfinansowane przez Unię Europejską" : "Co-funded by the European Union";
+        }
+      }
+
+      document.getElementById("btn-pl").addEventListener("click", () => setLang("pl"));
+      document.getElementById("btn-en").addEventListener("click", () => setLang("en"));
+      document.getElementById("hamburger-btn").addEventListener("click", () => {
+        const nav = document.getElementById("mobile-nav");
+        const isOpen = nav.classList.toggle("open");
+        document.getElementById("hamburger-btn").setAttribute("aria-expanded", isOpen);
+      });
+    </script>
   </body>
 </html>

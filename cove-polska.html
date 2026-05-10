@@ -208,11 +208,11 @@
       </div>
 
       <nav class="header-nav" aria-label="Main navigation">
-        <a href="index.html" data-i18n="nav_practices">Najlepsze Praktyki</a>
-        <a href="index.html#about" data-i18n="nav_about">O Projekcie</a>
-        <a href="index.html#methodology" data-i18n="nav_methodology">Metodologia</a>
-        <a href="/nasze-dzialania/" data-i18n="nav_actions">Nasze działania</a>
-        <a href="cove-polska.html" style="color: var(--eu-blue); font-weight: 600;" data-i18n="nav_cove">COVE Polska</a>
+        <a href="index.html#about" data-i18n="nav_about">O projekcie</a>
+        <a href="index.html#partners" data-i18n="nav_partners">Partnerzy</a>
+        <a href="https://news.covepolska.pl" data-i18n="nav_news">Aktualności</a>
+        <a href="/nasze-dzialania/" data-i18n="nav_offer">Nasza oferta</a>
+        <a href="/kontakt/" data-i18n="nav_contact">Kontakt</a>
       </nav>
 
       <button class="hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false" onclick="toggleMobileNavCP()">
@@ -229,11 +229,11 @@
   </header>
 
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <a href="index.html" data-i18n="nav_practices">Najlepsze Praktyki</a>
-    <a href="index.html#about" data-i18n="nav_about">O Projekcie</a>
-    <a href="index.html#methodology" data-i18n="nav_methodology">Metodologia</a>
-    <a href="/nasze-dzialania/" data-i18n="nav_actions">Nasze działania</a>
-    <a href="cove-polska.html" class="active" data-i18n="nav_cove">COVE Polska</a>
+    <a href="index.html#about" data-i18n="nav_about">O projekcie</a>
+    <a href="index.html#partners" data-i18n="nav_partners">Partnerzy</a>
+    <a href="https://news.covepolska.pl" data-i18n="nav_news">Aktualności</a>
+    <a href="/nasze-dzialania/" data-i18n="nav_offer">Nasza oferta</a>
+    <a href="/kontakt/" data-i18n="nav_contact">Kontakt</a>
   </nav>
 
   <!-- BACK BAR -->
@@ -263,7 +263,7 @@
             </svg>
           </a>
           <a href="/nasze-dzialania/" class="cove-hero-btn secondary">
-            <span data-i18n="hero_actions_btn">Nasze działania</span>
+            <span data-i18n="hero_offer_btn">Nasza oferta</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14"/><path d="M13 5l7 7-7 7"/>
             </svg>
@@ -294,11 +294,6 @@
             regionie o silnych tradycjach przemysłowych i rzemieślniczych. Misją konsorcjum jest transfer
             najlepszych europejskich praktyk innowacji w miejscu pracy do lokalnych małych i średnich
             przedsiębiorstw, wzmacniając ich konkurencyjność i zdolność adaptacji.
-          </p>
-          <p data-i18n="about_p3">
-            Projekt zakłada bezpośrednią współpracę z ponad 60 MŚP w regionie, oferując warsztaty,
-            materiały szkoleniowe i wsparcie doradcze oparte na 13 najlepszych praktykach wybranych
-            spośród 78 zgłoszonych przez 20 partnerów z całej Europy.
           </p>
         </div>
 
@@ -438,6 +433,12 @@
                    id="eu-logo-footer"
                    class="eu-logo" />
             </a>
+            <a href="https://www.wroclaw.pl/" target="_blank" rel="noopener noreferrer" aria-label="Wrocław website">
+              <img src="assets/wroclaw-miasto-spotkan.png"
+                   alt="Wrocław Miasto Spotkań"
+                   id="wroclaw-logo-footer"
+                   class="wroclaw-logo" />
+            </a>
           </div>
           <p class="footer-funded" data-i18n="footer_funded">
             Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autorów
@@ -454,31 +455,26 @@
           </a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span data-i18n="footer_project">WP3 Milestone 9 · Czerwiec 2025</span>
-        <span>WIN4SMEs · WP3</span>
-      </div>
     </div>
   </footer>
 
   <script>
   const I18N_CP = {
     en: {
-      nav_practices:   'Best Practices',
-      nav_about:       'About Project',
-      nav_methodology: 'Methodology',
-      nav_actions:     'Our activities',
-      nav_cove:        'COVE Polska',
+      nav_about:       'About project',
+      nav_partners:    'Partners',
+      nav_news:        'News',
+      nav_offer:       'Our offer',
+      nav_contact:     'Contact',
       back_link:       'Back to Best Practices',
       hero_tag:        'WIN4SMEs · Poland',
       hero_lead:       'Centre of Vocational Excellence (CoVE) in Poland — a regional partnership connecting education, science and business to strengthen workplace innovation in small and medium-sized enterprises of Lower Silesia.',
       hero_btn:        'Visit COVE Polska website',
-      hero_actions_btn:'Our activities',
+      hero_offer_btn:  'Our offer',
       about_label:     'About the initiative',
       about_h2:        'What is COVE Polska?',
       about_p1:        'The Centre of Vocational Excellence (CoVE) is a European initiative creating regional ecosystems of excellence in vocational education and training (VET). CoVEs connect educational institutions, universities and business partners to align vocational competences with current and future labour market needs.',
       about_p2:        'COVE Polska operates within the European WIN4SMEs project and focuses on Lower Silesia — a region with strong industrial and craft traditions. The consortium\'s mission is to transfer the best European workplace innovation practices to local small and medium-sized enterprises, strengthening their competitiveness and adaptability.',
-      about_p3:        'The project involves direct collaboration with more than 60 SMEs in the region, offering workshops, training materials and advisory support based on 13 best practices selected from 78 submitted by 20 partners across Europe.',
       pillar1_title:   'Educational Excellence',
       pillar1_desc:    'Raising the quality of vocational education by integrating the best European practices into curricula.',
       pillar2_title:   'Transfer to SMEs',
@@ -498,24 +494,22 @@
       dir_desc:        'An economic self-government organisation representing crafts and small businesses in Lower Silesia. The Chamber bridges the worlds of education and real business — it provides access to SME networks, understands their daily challenges and has many years of experience in organising dual and practical vocational training.',
       footer_funded:   'Co-funded by the European Union. Views and opinions expressed are those of the authors only and do not necessarily reflect those of the European Union or EACEA.',
       footer_back:     'Back to Best Practices',
-      footer_project:  'WP3 Milestone 9 · June 2025',
     },
     pl: {
-      nav_practices:   'Najlepsze Praktyki',
-      nav_about:       'O Projekcie',
-      nav_methodology: 'Metodologia',
-      nav_actions:     'Nasze działania',
-      nav_cove:        'COVE Polska',
+      nav_about:       'O projekcie',
+      nav_partners:    'Partnerzy',
+      nav_news:        'Aktualności',
+      nav_offer:       'Nasza oferta',
+      nav_contact:     'Kontakt',
       back_link:       'Powrót do Najlepszych Praktyk',
       hero_tag:        'WIN4SMEs · Polska',
       hero_lead:       'Centrum Doskonałości Kształcenia Zawodowego (CoVE) w Polsce — regionalne partnerstwo łączące edukację, naukę i biznes w celu wzmacniania innowacji w miejscu pracy w małych i średnich przedsiębiorstwach Dolnego Śląska.',
       hero_btn:        'Odwiedź stronę COVE Polska',
-      hero_actions_btn:'Nasze działania',
+      hero_offer_btn:  'Nasza oferta',
       about_label:     'O inicjatywie',
       about_h2:        'Czym jest COVE Polska?',
       about_p1:        'Centrum Doskonałości Kształcenia Zawodowego (CoVE — Centre of Vocational Excellence) to europejska inicjatywa tworząca regionalne ekosystemy doskonałości w kształceniu i szkoleniu zawodowym (VET). CoVE łączą instytucje edukacyjne, uczelnie wyższe i partnerów biznesowych w celu dopasowania kompetencji zawodowych do aktualnych i przyszłych potrzeb rynku pracy.',
       about_p2:        'COVE Polska działa w ramach europejskiego projektu WIN4SMEs i skupia się na Dolnym Śląsku — regionie o silnych tradycjach przemysłowych i rzemieślniczych. Misją konsorcjum jest transfer najlepszych europejskich praktyk innowacji w miejscu pracy do lokalnych małych i średnich przedsiębiorstw, wzmacniając ich konkurencyjność i zdolność adaptacji.',
-      about_p3:        'Projekt zakłada bezpośrednią współpracę z ponad 60 MŚP w regionie, oferując warsztaty, materiały szkoleniowe i wsparcie doradcze oparte na 13 najlepszych praktykach wybranych spośród 78 zgłoszonych przez 20 partnerów z całej Europy.',
       pillar1_title:   'Doskonałość edukacyjna',
       pillar1_desc:    'Podnoszenie jakości kształcenia zawodowego przez integrację najlepszych europejskich praktyk z programami nauczania.',
       pillar2_title:   'Transfer do MŚP',
@@ -535,7 +529,6 @@
       dir_desc:        'Organizacja samorządu gospodarczego reprezentująca rzemiosło i małą przedsiębiorczość na Dolnym Śląsku. Izba jest pomostem między światem edukacji a potrzebami realnych firm — zapewnia dostęp do sieci MŚP, rozumie ich codzienne wyzwania i posiada wieloletnie doświadczenie w organizacji kształcenia dualnego i praktycznego.',
       footer_funded:   'Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autorów i niekoniecznie odzwierciedlają stanowisko Unii Europejskiej lub Europejskiej Agencji Wykonawczej ds. Edukacji i Kultury (EACEA).',
       footer_back:     'Powrót do Najlepszych Praktyk',
-      footer_project:  'WP3 Milestone 9 · Czerwiec 2025',
     }
   };
 
@@ -562,6 +555,11 @@
     var euSrc = lang === 'pl' ? 'assets/PL_Co-fundedbytheEU_RGB_POS.png' : 'assets/EN_Co-fundedbytheEU_RGB_POS.png';
     if (euHeader) euHeader.src = euSrc;
     if (euFooter) euFooter.src = euSrc;
+    var wroclawFooter = document.getElementById('wroclaw-logo-footer');
+    if (wroclawFooter) {
+      wroclawFooter.src = lang === 'pl' ? 'assets/wroclaw-miasto-spotkan.png' : 'assets/wroclaw-miasto-spotkan-eng.png';
+      wroclawFooter.alt = lang === 'pl' ? 'Wrocław Miasto Spotkań' : 'Wrocław the Meeting Place';
+    }
   }
 
   setLangCP('pl');

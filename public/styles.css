@@ -83,12 +83,14 @@ p {
 
 .header-inner {
   width: min(var(--max-w), calc(100% - 32px));
-  min-height: 86px;
+  min-height: 92px;
   margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1.25rem;
+  padding: 0.85rem 0 0.7rem;
 }
 
 .logo-strip,
@@ -96,6 +98,12 @@ p {
   display: flex;
   align-items: center;
   gap: 0.9rem;
+}
+
+.logo-strip {
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-wrap: nowrap;
 }
 
 .logo-strip img {
@@ -115,12 +123,62 @@ p {
   background: var(--line);
 }
 
-.header-nav,
-.mobile-nav,
-.hamburger,
 .back-bar,
 .footer-download {
   display: none !important;
+}
+
+.header-nav {
+  order: 3;
+  flex: 1 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.65rem;
+  align-items: center;
+  padding-top: 0.1rem;
+}
+
+.header-nav a,
+.mobile-nav a {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+}
+
+.header-nav a:hover,
+.mobile-nav a:hover,
+.header-nav a:focus-visible,
+.mobile-nav a:focus-visible {
+  color: var(--eu-blue);
+  background: rgba(0, 51, 153, 0.08);
+}
+
+.hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.mobile-nav.open {
+  display: flex;
 }
 
 .lang-switch {
@@ -194,6 +252,10 @@ p {
   max-width: 250px;
 }
 
+.footer-logos .wroclaw-logo {
+  max-width: 190px;
+}
+
 .footer-funded {
   max-width: 920px;
   color: rgba(255, 255, 255, 0.72);
@@ -216,23 +278,84 @@ p {
   .header-inner {
     min-height: auto;
     padding: 0.75rem 0;
-    align-items: flex-start;
+    align-items: center;
+    gap: 0.75rem;
   }
 
   .logo-strip {
-    flex-wrap: wrap;
+    order: 1;
+    flex: 1 0 100%;
+    flex-wrap: nowrap;
+    gap: 0.45rem;
   }
 
   .logo-strip img {
-    max-width: 116px;
-    max-height: 44px;
+    max-width: 92px;
+    max-height: 40px;
   }
 
   #eu-logo-header {
-    max-width: 160px;
+    max-width: 130px;
+  }
+
+  .logo-divider {
+    height: 28px;
   }
 
   .lang-switch {
+    order: 2;
     margin-left: auto;
+  }
+
+  .hamburger {
+    order: 2;
+    display: inline-flex;
+  }
+
+  .header-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .header-inner {
+    width: min(var(--max-w), calc(100% - 20px));
+  }
+
+  .logo-strip {
+    gap: 0.35rem;
+  }
+
+  .logo-strip img {
+    max-width: 76px;
+    max-height: 34px;
+  }
+
+  #eu-logo-header {
+    max-width: 118px;
+  }
+
+  .lang-btn {
+    padding: 0.36rem 0.56rem;
+  }
+
+  .footer-logos {
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+  .footer-logos img,
+  .footer-logos .eu-logo,
+  .footer-logos .wroclaw-logo {
+    max-width: min(230px, 100%);
+    max-height: 74px;
+  }
+
+  .footer-funded {
+    text-align: center;
+  }
+
+  .site-footer {
+    padding-top: 2.4rem;
   }
 }
