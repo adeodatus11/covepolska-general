@@ -235,9 +235,9 @@ p {
 
 .footer-logos {
   display: grid;
-  grid-template-columns: 112px minmax(230px, 310px) 180px;
+  grid-template-columns: 112px minmax(230px, 310px) 146px;
   align-items: stretch;
-  gap: 1.1rem;
+  gap: 0.8rem;
   margin-bottom: 1.35rem;
 }
 
@@ -263,8 +263,8 @@ p {
 }
 
 .footer-logos .wroclaw-logo {
-  max-width: 126px;
-  max-height: 48px;
+  max-width: 118px;
+  max-height: 58px;
 }
 
 .footer-funded {
