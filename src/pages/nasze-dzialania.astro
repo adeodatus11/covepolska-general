@@ -37,6 +37,10 @@ const hubs = [
       "Model firmy ćwiczebnej Taniroda – praktyczna nauka biznesu w warunkach szkolnych. Symulacja realnych procesów, rozwój kompetencji przedsiębiorczych i pracy zespołowej."
   }
 ];
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <!doctype html>
@@ -64,13 +68,13 @@ const hubs = [
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/hub.css" />
+    <link rel="stylesheet" href={`${base}hub.css`} />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="/" aria-label="COVE Polska – strona główna">
-          <img src="assets/cove-polska-logo.png" alt="COVE Polska" />
+        <a class="brand" href={base} aria-label="COVE Polska – strona główna">
+          <img src={`${base}assets/cove-polska-logo.png`} alt="COVE Polska" />
         </a>
         <div class="header-badge">WIN4SMEs</div>
       </div>
@@ -95,7 +99,7 @@ const hubs = [
             hubs.map((hub) => (
               <article class="hub-card">
                 <a class="hub-media-link" href={hub.url} aria-label={`Przejdź do strony: ${hub.title}`}>
-                  <img class="hub-image" src={hub.image} alt={hub.alt} loading="lazy" />
+                  <img class="hub-image" src={`${base}${hub.image}`} alt={hub.alt} loading="lazy" />
                 </a>
                 <div class="hub-content">
                   <p class="hub-eyebrow">{hub.eyebrow}</p>
@@ -116,8 +120,8 @@ const hubs = [
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-logos" aria-label="Logotypy projektu i finansowania">
-          <img src="assets/Logo-2025.png" alt="WIN4SMEs" />
-          <img src="assets/PL_Co-fundedbytheEU_RGB_POS.png" alt="Współfinansowane przez Unię Europejską" />
+          <img src={`${base}assets/Logo-2025.png`} alt="WIN4SMEs" />
+          <img src={`${base}assets/PL_Co-fundedbytheEU_RGB_POS.png`} alt="Współfinansowane przez Unię Europejską" />
         </div>
         <p>
           COVE Polska działa w ramach projektu WIN4SMEs – Workplace Innovation for SMEs.
