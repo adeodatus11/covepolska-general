@@ -110,7 +110,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <nav class="header-nav" aria-label="Main navigation">
           <a href={`${base}#about`} data-i18n="nav_about">O projekcie</a>
           <a href={`${base}#partners`} data-i18n="nav_partners">Partnerzy</a>
-          <a href="https://news.covepolska.pl" data-i18n="nav_news">Aktualności</a>
+          <a href={`${base}aktualnosci/`} data-i18n="nav_news">Aktualności</a>
           <a href={`${base}nasze-dzialania/`} class="active" data-i18n="nav_offer">Nasza oferta</a>
           <a href={`${base}kontakt/`} data-i18n="nav_contact">Kontakt</a>
         </nav>
@@ -131,7 +131,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
       <a href={`${base}#about`} data-i18n="nav_about">O projekcie</a>
       <a href={`${base}#partners`} data-i18n="nav_partners">Partnerzy</a>
-      <a href="https://news.covepolska.pl" data-i18n="nav_news">Aktualności</a>
+      <a href={`${base}aktualnosci/`} data-i18n="nav_news">Aktualności</a>
       <a href={`${base}nasze-dzialania/`} class="active" data-i18n="nav_offer">Nasza oferta</a>
       <a href={`${base}kontakt/`} data-i18n="nav_contact">Kontakt</a>
     </nav>
