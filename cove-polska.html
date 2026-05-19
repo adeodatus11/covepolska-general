@@ -546,7 +546,18 @@
     btn.setAttribute('aria-expanded', open);
   }
 
-  function setLangCP(lang) {
+  var LANG_STORAGE_KEY_CP = 'covePolskaLang';
+
+  function getSavedLangCP() {
+    try {
+      var stored = localStorage.getItem(LANG_STORAGE_KEY_CP);
+      return stored === 'en' || stored === 'pl' ? stored : 'pl';
+    } catch (error) {
+      return 'pl';
+    }
+  }
+
+  function setLangCP(lang, persist) {
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       var key = el.dataset.i18n;
       if (I18N_CP[lang] && I18N_CP[lang][key]) el.textContent = I18N_CP[lang][key];
@@ -567,9 +578,14 @@
       wroclawFooter.src = lang === 'pl' ? 'assets/wroclaw-miasto-spotkan.png' : 'assets/wroclaw-miasto-spotkan-eng.png';
       wroclawFooter.alt = lang === 'pl' ? 'Wrocław Miasto Spotkań' : 'Wrocław the Meeting Place';
     }
+    if (persist !== false) {
+      try {
+        localStorage.setItem(LANG_STORAGE_KEY_CP, lang);
+      } catch (error) {}
+    }
   }
 
-  setLangCP('pl');
+  setLangCP(getSavedLangCP(), false);
   </script>
 </body>
 </html>
