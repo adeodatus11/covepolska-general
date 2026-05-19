@@ -195,7 +195,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         document.getElementById("btn-en").classList.toggle("active", lang === "en");
         document.getElementById("btn-pl").setAttribute("aria-pressed", lang === "pl");
         document.getElementById("btn-en").setAttribute("aria-pressed", lang === "en");
-        const src = lang === "pl" ? `${base}assets/wroclaw-miasto-spotkan.png` : `${base}assets/wroclaw-miasto-spotkan-eng.png`;
+        const src = lang === "pl" ? `${base}assets/wroclaw-miasto-spotkan.png` : `${base}assets/wroclaw-meeting-place-better.png`;
         const alt = lang === "pl" ? "Wrocław Miasto Spotkań" : "Wrocław the Meeting Place";
         document.querySelectorAll("#wroclaw-logo-footer").forEach((img) => {
           img.src = src;

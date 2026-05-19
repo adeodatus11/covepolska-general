@@ -245,7 +245,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         document.getElementById("btn-en").setAttribute("aria-pressed", lang === "en");
         const wroclaw = document.getElementById("wroclaw-logo-footer");
         if (wroclaw) {
-          wroclaw.src = lang === "pl" ? `${base}assets/wroclaw-miasto-spotkan.png` : `${base}assets/wroclaw-miasto-spotkan-eng.png`;
+          wroclaw.src = lang === "pl" ? `${base}assets/wroclaw-miasto-spotkan.png` : `${base}assets/wroclaw-meeting-place-better.png`;
           wroclaw.alt = lang === "pl" ? "Wrocław Miasto Spotkań" : "Wrocław the Meeting Place";
         }
         const euHeader = document.getElementById("eu-logo-header");
