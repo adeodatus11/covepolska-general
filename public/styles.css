@@ -221,6 +221,27 @@ p {
   text-transform: uppercase;
 }
 
+.about-highlight {
+  margin-top: 1.25rem;
+}
+
+.about-highlight a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--eu-blue);
+  background: rgba(0, 51, 153, 0.08);
+  border: 1px solid rgba(0, 51, 153, 0.14);
+  border-radius: 999px;
+  padding: 0.65rem 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.about-highlight a:hover {
+  background: rgba(0, 51, 153, 0.13);
+}
+
 .site-footer {
   padding: 3rem 0 1.25rem;
   color: #dfe7f2;
@@ -234,37 +255,57 @@ p {
 }
 
 .footer-logos {
-  display: grid;
-  grid-template-columns: 112px minmax(230px, 310px) 146px;
-  align-items: stretch;
-  gap: 0.8rem;
-  margin-bottom: 1.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.15rem;
 }
 
 .footer-logos > a {
-  min-height: 82px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem;
+  flex: 0 0 auto;
+  padding: 0.62rem 0.78rem;
   border-radius: 12px;
   background: #fff;
+}
+
+.footer-logos > a:nth-child(1) {
+  width: 96px;
+}
+
+.footer-logos > a:nth-child(2) {
+  width: 188px;
+}
+
+.footer-logos > a:nth-child(3) {
+  width: 286px;
+}
+
+.footer-logos > a:nth-child(4) {
+  width: 134px;
 }
 
 .footer-logos img {
   width: auto;
   max-width: 100%;
-  max-height: 62px;
+  max-height: 58px;
   object-fit: contain;
 }
 
 .footer-logos a:first-child img {
-  max-width: 70px;
+  max-width: 64px;
+}
+
+.footer-logos a:nth-child(2) img {
+  max-width: 164px;
 }
 
 .footer-logos .wroclaw-logo {
-  max-width: 118px;
-  max-height: 58px;
+  max-width: 116px;
+  max-height: 52px;
 }
 
 .footer-funded {
@@ -326,6 +367,48 @@ p {
   .header-nav {
     display: none;
   }
+
+  .footer-logos {
+    gap: 0.55rem;
+  }
+
+  .footer-logos > a {
+    min-height: 64px;
+    padding: 0.5rem 0.62rem;
+  }
+
+  .footer-logos > a:nth-child(1) {
+    width: 78px;
+  }
+
+  .footer-logos > a:nth-child(2) {
+    width: 146px;
+  }
+
+  .footer-logos > a:nth-child(3) {
+    width: 224px;
+  }
+
+  .footer-logos > a:nth-child(4) {
+    width: 100px;
+  }
+
+  .footer-logos img {
+    max-height: 48px;
+  }
+
+  .footer-logos a:first-child img {
+    max-width: 50px;
+  }
+
+  .footer-logos a:nth-child(2) img {
+    max-width: 126px;
+  }
+
+  .footer-logos .wroclaw-logo {
+    max-width: 86px;
+    max-height: 42px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -351,25 +434,47 @@ p {
   }
 
   .footer-logos {
-    grid-template-columns: 92px minmax(0, 1fr);
-    gap: 0.7rem;
+    gap: 0.25rem;
+    justify-content: center;
   }
 
   .footer-logos > a {
-    min-height: 76px;
+    min-height: 54px;
+    padding: 0.32rem;
+    border-radius: 10px;
   }
 
-  .footer-logos > a:last-child {
-    grid-column: span 2;
+  .footer-logos > a:nth-child(1) {
+    width: 44px;
+  }
+
+  .footer-logos > a:nth-child(2) {
+    width: 74px;
+  }
+
+  .footer-logos > a:nth-child(3) {
+    width: 106px;
+  }
+
+  .footer-logos > a:nth-child(4) {
+    width: 64px;
   }
 
   .footer-logos img {
-    max-height: 56px;
+    max-height: 43px;
+  }
+
+  .footer-logos a:first-child img {
+    max-width: 36px;
+  }
+
+  .footer-logos a:nth-child(2) img {
+    max-width: 66px;
   }
 
   .footer-logos .wroclaw-logo {
-    max-width: 130px;
-    max-height: 46px;
+    max-width: 58px;
+    max-height: 36px;
   }
 
   .footer-funded {
