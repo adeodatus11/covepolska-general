@@ -12,10 +12,10 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <title>Aktualności – COVE Polska</title>
     <meta
       name="description"
-      content="Aktualności COVE Polska są w przygotowaniu. Bieżące informacje o działaniach projektu znajdziesz w mediach społecznościowych."
+      content="Aktualności COVE Polska z kanałów LinkedIn, Facebook i YouTube. Sprawdź bieżące informacje o działaniach projektu."
     />
     <meta property="og:title" content="Aktualności – COVE Polska" />
-    <meta property="og:description" content="Strona aktualności COVE Polska jest w budowie. Sprawdź bieżące informacje w mediach społecznościowych." />
+    <meta property="og:description" content="Aktualności COVE Polska z kanałów LinkedIn, Facebook i YouTube." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://new.covepolska.pl/aktualnosci/" />
     <meta property="og:image" content="http://new.covepolska.pl/assets/cove-polska-logo.png" />
@@ -78,39 +78,90 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <section class="hero news-hero" aria-labelledby="news-heading">
         <div class="container hero-inner">
           <p class="section-kicker" data-i18n="news_kicker">Aktualności</p>
-          <h1 id="news-heading" data-i18n="news_h1">Strona aktualności jest w budowie</h1>
+          <h1 id="news-heading" data-i18n="news_h1">Aktualności z kanałów COVE Polska</h1>
           <p class="hero-lead" data-i18n="news_lead">
-            Przygotowujemy uporządkowane miejsce na komunikaty, relacje z wydarzeń i materiały projektowe. Do czasu uruchomienia archiwum bieżące informacje publikujemy w mediach społecznościowych.
+            Bieżące informacje publikujemy w mediach społecznościowych. Tutaj zbieramy kanały projektu w jednym miejscu.
           </p>
         </div>
       </section>
 
-      <section class="news-section" aria-label="Media społecznościowe COVE Polska">
-        <div class="container news-layout">
-          <article class="news-status-card">
-            <span class="news-status-label" data-i18n="status_label">W przygotowaniu</span>
-            <h2 data-i18n="status_h2">Aktualności COVE Polska</h2>
-            <p data-i18n="status_p">
-              Ta sekcja będzie docelowo miejscem publikowania informacji o wydarzeniach, działaniach partnerów, materiałach i rezultatach projektu.
+      <section class="news-section" aria-label="Aktualności z mediów społecznościowych COVE Polska">
+        <div class="container social-feed-stack">
+          <div class="feed-intro">
+            <h2 data-i18n="feed_h2">Feed aktualności</h2>
+            <p data-i18n="feed_p">
+              LinkedIn, Facebook i YouTube są bieżącymi kanałami komunikacji projektu. Każdy blok prowadzi bezpośrednio do aktualnego źródła.
             </p>
-          </article>
+          </div>
 
-          <div class="social-grid">
-            <a class="social-card" href="https://www.linkedin.com/company/cove-polska/" target="_blank" rel="noopener noreferrer">
-              <span class="social-mark" aria-hidden="true">in</span>
-              <span>
-                <strong data-i18n="social_cove_title">COVE Polska na LinkedIn</strong>
-                <small data-i18n="social_cove_desc">Bieżące informacje o działaniach polskiego partnerstwa.</small>
-              </span>
-            </a>
+          <div class="feed-grid">
+            <article class="feed-card feed-card-wide">
+              <div class="feed-frame">
+                <div class="feed-frame-header">
+                  <span class="feed-service">LinkedIn</span>
+                  <span class="feed-live" data-i18n="feed_source">źródło aktualności</span>
+                </div>
+                <div class="feed-placeholder">
+                  <span class="feed-mark linkedin" aria-hidden="true">in</span>
+                  <div>
+                    <h3 data-i18n="linkedin_cove_title">COVE Polska na LinkedIn</h3>
+                    <p data-i18n="linkedin_cove_desc">Komunikaty, relacje z działań i informacje o zasobach polskiego partnerstwa.</p>
+                  </div>
+                  <a class="feed-button" href="https://www.linkedin.com/company/cove-polska/" target="_blank" rel="noopener noreferrer" data-i18n="open_feed">Przejdź do feedu</a>
+                </div>
+              </div>
+            </article>
 
-            <a class="social-card" href="https://www.linkedin.com/company/win4smes/" target="_blank" rel="noopener noreferrer">
-              <span class="social-mark" aria-hidden="true">in</span>
-              <span>
-                <strong data-i18n="social_win_title">WIN4SMEs na LinkedIn</strong>
-                <small data-i18n="social_win_desc">Informacje z poziomu międzynarodowego projektu.</small>
-              </span>
-            </a>
+            <article class="feed-card">
+              <div class="feed-frame">
+                <div class="feed-frame-header">
+                  <span class="feed-service">LinkedIn</span>
+                  <span class="feed-live" data-i18n="feed_source">źródło aktualności</span>
+                </div>
+                <div class="feed-placeholder">
+                  <span class="feed-mark linkedin" aria-hidden="true">in</span>
+                  <div>
+                    <h3 data-i18n="linkedin_win_title">WIN4SMEs na LinkedIn</h3>
+                    <p data-i18n="linkedin_win_desc">Aktualności z międzynarodowego poziomu projektu i sieci partnerów.</p>
+                  </div>
+                  <a class="feed-button" href="https://www.linkedin.com/company/win4smes/posts/?feedView=all" target="_blank" rel="noopener noreferrer" data-i18n="open_feed">Przejdź do feedu</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="feed-card">
+              <div class="feed-frame">
+                <div class="feed-frame-header">
+                  <span class="feed-service">Facebook</span>
+                  <span class="feed-live" data-i18n="feed_source">źródło aktualności</span>
+                </div>
+                <div class="feed-placeholder">
+                  <span class="feed-mark facebook" aria-hidden="true">f</span>
+                  <div>
+                    <h3 data-i18n="facebook_title">COVE Polska na Facebooku</h3>
+                    <p data-i18n="facebook_desc">Krótsze informacje, zapowiedzi i relacje publikowane dla lokalnej społeczności.</p>
+                  </div>
+                  <a class="feed-button" href="https://www.facebook.com/profile.php?id=61573736918326" target="_blank" rel="noopener noreferrer" data-i18n="open_feed">Przejdź do feedu</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="feed-card feed-card-wide">
+              <div class="feed-frame">
+                <div class="feed-frame-header">
+                  <span class="feed-service">YouTube</span>
+                  <span class="feed-live" data-i18n="feed_source">źródło aktualności</span>
+                </div>
+                <div class="feed-placeholder">
+                  <span class="feed-mark youtube" aria-hidden="true">yt</span>
+                  <div>
+                    <h3 data-i18n="youtube_title">COVE Polska na YouTube</h3>
+                    <p data-i18n="youtube_desc">Materiały wideo, nagrania i publikacje multimedialne projektu.</p>
+                  </div>
+                  <a class="feed-button" href="https://www.youtube.com/@COVEPolska" target="_blank" rel="noopener noreferrer" data-i18n="open_feed">Przejdź do feedu</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -140,15 +191,20 @@ const base = import.meta.env.BASE_URL.endsWith("/")
           nav_offer: "Nasza oferta",
           nav_contact: "Kontakt",
           news_kicker: "Aktualności",
-          news_h1: "Strona aktualności jest w budowie",
-          news_lead: "Przygotowujemy uporządkowane miejsce na komunikaty, relacje z wydarzeń i materiały projektowe. Do czasu uruchomienia archiwum bieżące informacje publikujemy w mediach społecznościowych.",
-          status_label: "W przygotowaniu",
-          status_h2: "Aktualności COVE Polska",
-          status_p: "Ta sekcja będzie docelowo miejscem publikowania informacji o wydarzeniach, działaniach partnerów, materiałach i rezultatach projektu.",
-          social_cove_title: "COVE Polska na LinkedIn",
-          social_cove_desc: "Bieżące informacje o działaniach polskiego partnerstwa.",
-          social_win_title: "WIN4SMEs na LinkedIn",
-          social_win_desc: "Informacje z poziomu międzynarodowego projektu.",
+          news_h1: "Aktualności z kanałów COVE Polska",
+          news_lead: "Bieżące informacje publikujemy w mediach społecznościowych. Tutaj zbieramy kanały projektu w jednym miejscu.",
+          feed_h2: "Feed aktualności",
+          feed_p: "LinkedIn, Facebook i YouTube są bieżącymi kanałami komunikacji projektu. Każdy blok prowadzi bezpośrednio do aktualnego źródła.",
+          feed_source: "źródło aktualności",
+          open_feed: "Przejdź do feedu",
+          linkedin_cove_title: "COVE Polska na LinkedIn",
+          linkedin_cove_desc: "Komunikaty, relacje z działań i informacje o zasobach polskiego partnerstwa.",
+          linkedin_win_title: "WIN4SMEs na LinkedIn",
+          linkedin_win_desc: "Aktualności z międzynarodowego poziomu projektu i sieci partnerów.",
+          facebook_title: "COVE Polska na Facebooku",
+          facebook_desc: "Krótsze informacje, zapowiedzi i relacje publikowane dla lokalnej społeczności.",
+          youtube_title: "COVE Polska na YouTube",
+          youtube_desc: "Materiały wideo, nagrania i publikacje multimedialne projektu.",
           footer_note: "Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autorów i niekoniecznie odzwierciedlają stanowisko Unii Europejskiej lub Europejskiej Agencji Wykonawczej ds. Edukacji i Kultury (EACEA)."
         },
         en: {
@@ -158,15 +214,20 @@ const base = import.meta.env.BASE_URL.endsWith("/")
           nav_offer: "Our offer",
           nav_contact: "Contact",
           news_kicker: "News",
-          news_h1: "The news section is under construction",
-          news_lead: "We are preparing a structured space for announcements, event reports and project materials. Until the archive is launched, current updates are published on social media.",
-          status_label: "In progress",
-          status_h2: "COVE Polska News",
-          status_p: "This section will become the place for information about events, partner activities, materials and project results.",
-          social_cove_title: "COVE Polska on LinkedIn",
-          social_cove_desc: "Current updates from the Polish partnership.",
-          social_win_title: "WIN4SMEs on LinkedIn",
-          social_win_desc: "Updates from the international project level.",
+          news_h1: "News from COVE Polska channels",
+          news_lead: "We publish current updates on social media. This page gathers the project channels in one place.",
+          feed_h2: "News feed",
+          feed_p: "LinkedIn, Facebook and YouTube are the current communication channels for the project. Each block leads directly to the latest source.",
+          feed_source: "news source",
+          open_feed: "Open feed",
+          linkedin_cove_title: "COVE Polska on LinkedIn",
+          linkedin_cove_desc: "Announcements, activity reports and updates about resources from the Polish partnership.",
+          linkedin_win_title: "WIN4SMEs on LinkedIn",
+          linkedin_win_desc: "Updates from the international project level and partner network.",
+          facebook_title: "COVE Polska on Facebook",
+          facebook_desc: "Short updates, announcements and reports for the local community.",
+          youtube_title: "COVE Polska on YouTube",
+          youtube_desc: "Video materials, recordings and multimedia project publications.",
           footer_note: "Co-funded by the European Union. Views and opinions expressed are those of the authors only and do not necessarily reflect those of the European Union or EACEA."
         }
       };
