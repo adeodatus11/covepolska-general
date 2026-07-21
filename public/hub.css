@@ -271,6 +271,21 @@ h1 {
   box-shadow: var(--shadow-hover);
 }
 
+.hub-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+}
+
+.hub-card:last-child:nth-child(odd) .hub-media-link {
+  min-height: 100%;
+}
+
+.hub-card:last-child:nth-child(odd) .hub-image {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
 .hub-media-link {
   display: block;
   overflow: hidden;
@@ -837,6 +852,16 @@ h1 {
 
   .hub-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hub-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    display: block;
+  }
+
+  .hub-card:last-child:nth-child(odd) .hub-image {
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .contact-grid {
