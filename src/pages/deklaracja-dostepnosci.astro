@@ -1,0 +1,373 @@
+---
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deklaracja dostępności – COVE Polska</title>
+    <meta
+      name="description"
+      content="Deklaracja dostępności cyfrowej serwisu COVE Polska oraz wskazanych subdomen projektowych."
+    />
+    <meta property="og:title" content="Deklaracja dostępności – COVE Polska" />
+    <meta property="og:description" content="Informacje o dostępności cyfrowej serwisu COVE Polska." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://new.covepolska.pl/deklaracja-dostepnosci/" />
+    <meta property="og:image" content="http://new.covepolska.pl/assets/cove-polska-logo.png" />
+    <meta name="theme-color" content="#0d2b66" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href={`${base}hub.css`} />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <div class="logo-strip">
+          <a href="https://win4smes.eu" target="_blank" rel="noopener noreferrer" aria-label="WIN4SMEs website">
+            <img src={`${base}assets/Logo-2025.png`} alt="WIN4SMEs" />
+          </a>
+          <div class="logo-divider"></div>
+          <a href={base} aria-label="COVE Polska – strona główna">
+            <img src={`${base}assets/cove-polska-logo.png`} alt="COVE Polska" />
+          </a>
+          <div class="logo-divider"></div>
+          <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" target="_blank" rel="noopener noreferrer" aria-label="EU Funding portal">
+            <img src={`${base}assets/PL_Co-fundedbytheEU_RGB_POS.png`} alt="Dofinansowane przez Unię Europejską" id="eu-logo-header" />
+          </a>
+        </div>
+
+        <nav class="header-nav" aria-label="Main navigation">
+          <a href={`${base}#about`} data-i18n="nav_about">O projekcie</a>
+          <a href={`${base}#partners`} data-i18n="nav_partners">Partnerzy</a>
+          <a href={`${base}aktualnosci/`} data-i18n="nav_news">Aktualności</a>
+          <a href={`${base}nasze-dzialania/`} data-i18n="nav_offer">Nasza oferta</a>
+          <a href={`${base}kontakt/`} data-i18n="nav_contact">Kontakt</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
+        <div class="lang-switch" role="group" aria-label="Language selection">
+          <button class="lang-btn" id="btn-en" type="button" aria-pressed="false">EN</button>
+          <button class="lang-btn active" id="btn-pl" type="button" aria-pressed="true">PL</button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href={`${base}#about`} data-i18n="nav_about">O projekcie</a>
+      <a href={`${base}#partners`} data-i18n="nav_partners">Partnerzy</a>
+      <a href={`${base}aktualnosci/`} data-i18n="nav_news">Aktualności</a>
+      <a href={`${base}nasze-dzialania/`} data-i18n="nav_offer">Nasza oferta</a>
+      <a href={`${base}kontakt/`} data-i18n="nav_contact">Kontakt</a>
+    </nav>
+
+    <main>
+      <section class="hero declaration-hero" aria-labelledby="declaration-heading">
+        <div class="container hero-inner">
+          <p class="section-kicker" data-i18n="declaration_kicker">Dostępność cyfrowa</p>
+          <h1 id="declaration-heading" data-i18n="declaration_h1">Deklaracja dostępności</h1>
+          <p class="hero-lead" data-i18n="declaration_lead">
+            Deklaracja opisuje dostępność cyfrową serwisu COVE Polska oraz wskazanych subdomen projektowych.
+          </p>
+        </div>
+      </section>
+
+      <section class="declaration-section" aria-label="Treść deklaracji dostępności">
+        <div class="container declaration-layout">
+          <aside class="declaration-summary" aria-labelledby="summary-heading">
+            <h2 id="summary-heading" data-i18n="summary_h2">Najważniejsze informacje</h2>
+            <dl>
+              <div>
+                <dt data-i18n="summary_site_label">Serwis</dt>
+                <dd>covepolska.pl</dd>
+              </div>
+              <div>
+                <dt data-i18n="summary_status_label">Status</dt>
+                <dd data-i18n="summary_status_value">częściowo zgodna</dd>
+              </div>
+              <div>
+                <dt data-i18n="summary_date_label">Data deklaracji</dt>
+                <dd>22.07.2026</dd>
+              </div>
+              <div>
+                <dt data-i18n="summary_contact_label">Kontakt</dt>
+                <dd><a href="mailto:kontakt@covepolska.pl">kontakt@covepolska.pl</a></dd>
+              </div>
+            </dl>
+          </aside>
+
+          <article class="declaration-card">
+            <section aria-labelledby="scope-heading">
+              <h2 id="scope-heading" data-i18n="scope_h2">Zakres deklaracji</h2>
+              <p data-i18n="scope_p1">
+                COVE Polska dokłada starań, aby strona internetowa i serwisy projektowe były dostępne dla możliwie szerokiego grona użytkowników, w tym osób z niepełnosprawnościami.
+              </p>
+              <p data-i18n="scope_p2">
+                Deklaracja dotyczy strony głównej COVE Polska pod adresem https://covepolska.pl oraz powiązanych serwisów projektowych prowadzonych w subdomenach.
+              </p>
+              <ul>
+                <li><a href="https://ai.covepolska.pl">ai.covepolska.pl</a></li>
+                <li><a href="https://innowacje.covepolska.pl">innowacje.covepolska.pl</a></li>
+                <li><a href="https://mentor.covepolska.pl">mentor.covepolska.pl</a></li>
+                <li><a href="https://taniroda.covepolska.pl">taniroda.covepolska.pl</a></li>
+                <li><a href="https://tuz.covepolska.pl">tuz.covepolska.pl</a></li>
+                <li><a href="https://hamburg2026.covepolska.pl">hamburg2026.covepolska.pl</a></li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="status-heading">
+              <h2 id="status-heading" data-i18n="status_h2">Stan dostępności cyfrowej</h2>
+              <p data-i18n="status_p1">
+                Strona internetowa jest częściowo zgodna z wymaganiami dostępności cyfrowej. Deklaracja została przygotowana na podstawie samooceny oraz przeglądu podstawowych szablonów serwisu.
+              </p>
+              <p data-i18n="status_p2">
+                Status „częściowo zgodna” wynika z tego, że część materiałów i serwisów projektowych powstaje etapowo, a wybrane dokumenty, multimedia lub treści osadzone z zewnętrznych platform mogą wymagać dodatkowego dostosowania.
+              </p>
+            </section>
+
+            <section aria-labelledby="issues-heading">
+              <h2 id="issues-heading" data-i18n="issues_h2">Treści niedostępne lub częściowo niedostępne</h2>
+              <ul>
+                <li data-i18n="issues_1">Niektóre materiały do pobrania, w szczególności prezentacje i pliki PDF, mogą nie być w pełni przygotowane zgodnie z wymaganiami dostępności.</li>
+                <li data-i18n="issues_2">Treści osadzone lub prowadzące do zewnętrznych serwisów, takich jak LinkedIn, Facebook, YouTube lub strony partnerów, mogą mieć ograniczenia niezależne od COVE Polska.</li>
+                <li data-i18n="issues_3">Część subdomen projektowych jest rozwijana niezależnie i może wymagać osobnej weryfikacji dostępności.</li>
+                <li data-i18n="issues_4">Starsze grafiki lub materiały promocyjne mogą wymagać uzupełnienia opisów alternatywnych albo wersji tekstowej.</li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="dates-heading">
+              <h2 id="dates-heading" data-i18n="dates_h2">Daty publikacji i aktualizacji</h2>
+              <ul>
+                <li><strong data-i18n="publication_date_label">Data publikacji strony:</strong> 10.05.2026</li>
+                <li><strong data-i18n="declaration_date_label">Data sporządzenia deklaracji:</strong> 22.07.2026</li>
+                <li><strong data-i18n="review_date_label">Data ostatniego przeglądu deklaracji:</strong> 22.07.2026</li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="keyboard-heading">
+              <h2 id="keyboard-heading" data-i18n="keyboard_h2">Skróty klawiaturowe</h2>
+              <p data-i18n="keyboard_p">
+                W serwisie nie zastosowano niestandardowych skrótów klawiaturowych. Można korzystać ze standardowych skrótów przeglądarki internetowej i systemu operacyjnego.
+              </p>
+            </section>
+
+            <section aria-labelledby="feedback-heading">
+              <h2 id="feedback-heading" data-i18n="feedback_h2">Informacje zwrotne i dane kontaktowe</h2>
+              <p data-i18n="feedback_p1">
+                Problemy z dostępnością cyfrową strony, subdomen lub materiałów projektowych można zgłaszać do koordynatora działań COVE Polska.
+              </p>
+              <div class="contact-inline">
+                <p>
+                  <strong>Maciej Najwer</strong><br />
+                  <a href="mailto:kontakt@covepolska.pl">kontakt@covepolska.pl</a><br />
+                  <a href="tel:+48609625743">+48 609 625 743</a>
+                </p>
+              </div>
+              <p data-i18n="feedback_p2">
+                W zgłoszeniu podaj swoje imię i nazwisko, dane kontaktowe, adres strony lub materiału, którego dotyczy problem, opis problemu oraz preferowany sposób otrzymania odpowiedzi lub alternatywnej wersji treści.
+              </p>
+            </section>
+
+            <section aria-labelledby="requests-heading">
+              <h2 id="requests-heading" data-i18n="requests_h2">Obsługa wniosków i skarg związanych z dostępnością</h2>
+              <p data-i18n="requests_p1">
+                Na zgłoszenie odpowiemy bez zbędnej zwłoki, nie później niż w ciągu 7 dni. Jeżeli zapewnienie dostępności albo przygotowanie alternatywnego dostępu w tym terminie nie będzie możliwe, poinformujemy o przyczynie opóźnienia i wskażemy nowy termin.
+              </p>
+              <p data-i18n="requests_p2">
+                Jeżeli odpowiedź na zgłoszenie nie będzie satysfakcjonująca, można ponowić kontakt z zespołem COVE Polska. W przypadku podmiotów publicznych użytkownik może także skorzystać z przewidzianych prawem procedur skargowych, w tym z kontaktu z Rzecznikiem Praw Obywatelskich.
+              </p>
+            </section>
+
+            <section aria-labelledby="architecture-heading">
+              <h2 id="architecture-heading" data-i18n="architecture_h2">Dostępność architektoniczna i komunikacyjna</h2>
+              <p data-i18n="architecture_p1">
+                Siedziba kontaktowa COVE Polska: Dolnośląska Izba Rzemieślnicza we Wrocławiu, Plac Solny 13, 50-061 Wrocław.
+              </p>
+              <p data-i18n="architecture_p2">
+                Przed wizytą osobistą prosimy o kontakt mailowy lub telefoniczny. Pozwoli to potwierdzić dostępność miejsca spotkania oraz przygotować odpowiednią formę kontaktu lub wsparcia.
+              </p>
+            </section>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-logos" aria-label="Logotypy projektu i finansowania">
+          <img src={`${base}assets/Logo-2025.png`} alt="WIN4SMEs" />
+          <img id="eu-logo-footer" src={`${base}assets/PL_Co-fundedbytheEU_RGB_POS.png`} alt="Współfinansowane przez Unię Europejską" />
+          <a href="https://www.wroclaw.pl/" target="_blank" rel="noopener noreferrer" aria-label="Wrocław website">
+            <img class="wroclaw-logo" id="wroclaw-logo-footer" src={`${base}assets/wroclaw-miasto-spotkan.png`} alt="Wrocław Miasto Spotkań" />
+          </a>
+        </div>
+        <p data-i18n="footer_note">
+          Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autorów i niekoniecznie odzwierciedlają stanowisko Unii Europejskiej lub Europejskiej Agencji Wykonawczej ds. Edukacji i Kultury (EACEA).
+        </p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href={`${base}deklaracja-dostepnosci/`} aria-current="page" data-i18n="footer_accessibility">Deklaracja dostępności</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script define:vars={{ base }}>
+      const I18N = {
+        pl: {
+          nav_about: "O projekcie",
+          nav_partners: "Partnerzy",
+          nav_news: "Aktualności",
+          nav_offer: "Nasza oferta",
+          nav_contact: "Kontakt",
+          declaration_kicker: "Dostępność cyfrowa",
+          declaration_h1: "Deklaracja dostępności",
+          declaration_lead: "Deklaracja opisuje dostępność cyfrową serwisu COVE Polska oraz wskazanych subdomen projektowych.",
+          summary_h2: "Najważniejsze informacje",
+          summary_site_label: "Serwis",
+          summary_status_label: "Status",
+          summary_status_value: "częściowo zgodna",
+          summary_date_label: "Data deklaracji",
+          summary_contact_label: "Kontakt",
+          scope_h2: "Zakres deklaracji",
+          scope_p1: "COVE Polska dokłada starań, aby strona internetowa i serwisy projektowe były dostępne dla możliwie szerokiego grona użytkowników, w tym osób z niepełnosprawnościami.",
+          scope_p2: "Deklaracja dotyczy strony głównej COVE Polska pod adresem https://covepolska.pl oraz powiązanych serwisów projektowych prowadzonych w subdomenach.",
+          status_h2: "Stan dostępności cyfrowej",
+          status_p1: "Strona internetowa jest częściowo zgodna z wymaganiami dostępności cyfrowej. Deklaracja została przygotowana na podstawie samooceny oraz przeglądu podstawowych szablonów serwisu.",
+          status_p2: "Status „częściowo zgodna” wynika z tego, że część materiałów i serwisów projektowych powstaje etapowo, a wybrane dokumenty, multimedia lub treści osadzone z zewnętrznych platform mogą wymagać dodatkowego dostosowania.",
+          issues_h2: "Treści niedostępne lub częściowo niedostępne",
+          issues_1: "Niektóre materiały do pobrania, w szczególności prezentacje i pliki PDF, mogą nie być w pełni przygotowane zgodnie z wymaganiami dostępności.",
+          issues_2: "Treści osadzone lub prowadzące do zewnętrznych serwisów, takich jak LinkedIn, Facebook, YouTube lub strony partnerów, mogą mieć ograniczenia niezależne od COVE Polska.",
+          issues_3: "Część subdomen projektowych jest rozwijana niezależnie i może wymagać osobnej weryfikacji dostępności.",
+          issues_4: "Starsze grafiki lub materiały promocyjne mogą wymagać uzupełnienia opisów alternatywnych albo wersji tekstowej.",
+          dates_h2: "Daty publikacji i aktualizacji",
+          publication_date_label: "Data publikacji strony:",
+          declaration_date_label: "Data sporządzenia deklaracji:",
+          review_date_label: "Data ostatniego przeglądu deklaracji:",
+          keyboard_h2: "Skróty klawiaturowe",
+          keyboard_p: "W serwisie nie zastosowano niestandardowych skrótów klawiaturowych. Można korzystać ze standardowych skrótów przeglądarki internetowej i systemu operacyjnego.",
+          feedback_h2: "Informacje zwrotne i dane kontaktowe",
+          feedback_p1: "Problemy z dostępnością cyfrową strony, subdomen lub materiałów projektowych można zgłaszać do koordynatora działań COVE Polska.",
+          feedback_p2: "W zgłoszeniu podaj swoje imię i nazwisko, dane kontaktowe, adres strony lub materiału, którego dotyczy problem, opis problemu oraz preferowany sposób otrzymania odpowiedzi lub alternatywnej wersji treści.",
+          requests_h2: "Obsługa wniosków i skarg związanych z dostępnością",
+          requests_p1: "Na zgłoszenie odpowiemy bez zbędnej zwłoki, nie później niż w ciągu 7 dni. Jeżeli zapewnienie dostępności albo przygotowanie alternatywnego dostępu w tym terminie nie będzie możliwe, poinformujemy o przyczynie opóźnienia i wskażemy nowy termin.",
+          requests_p2: "Jeżeli odpowiedź na zgłoszenie nie będzie satysfakcjonująca, można ponowić kontakt z zespołem COVE Polska. W przypadku podmiotów publicznych użytkownik może także skorzystać z przewidzianych prawem procedur skargowych, w tym z kontaktu z Rzecznikiem Praw Obywatelskich.",
+          architecture_h2: "Dostępność architektoniczna i komunikacyjna",
+          architecture_p1: "Siedziba kontaktowa COVE Polska: Dolnośląska Izba Rzemieślnicza we Wrocławiu, Plac Solny 13, 50-061 Wrocław.",
+          architecture_p2: "Przed wizytą osobistą prosimy o kontakt mailowy lub telefoniczny. Pozwoli to potwierdzić dostępność miejsca spotkania oraz przygotować odpowiednią formę kontaktu lub wsparcia.",
+          footer_note: "Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autorów i niekoniecznie odzwierciedlają stanowisko Unii Europejskiej lub Europejskiej Agencji Wykonawczej ds. Edukacji i Kultury (EACEA).",
+          footer_accessibility: "Deklaracja dostępności"
+        },
+        en: {
+          nav_about: "About project",
+          nav_partners: "Partners",
+          nav_news: "News",
+          nav_offer: "Our offer",
+          nav_contact: "Contact",
+          declaration_kicker: "Digital accessibility",
+          declaration_h1: "Accessibility statement",
+          declaration_lead: "This statement describes the digital accessibility of the COVE Polska website and selected project subdomains.",
+          summary_h2: "Key information",
+          summary_site_label: "Website",
+          summary_status_label: "Status",
+          summary_status_value: "partially compliant",
+          summary_date_label: "Statement date",
+          summary_contact_label: "Contact",
+          scope_h2: "Scope of the statement",
+          scope_p1: "COVE Polska makes efforts to ensure that the website and project services are accessible to the widest possible group of users, including people with disabilities.",
+          scope_p2: "This statement applies to the main COVE Polska website at https://covepolska.pl and related project services operated on subdomains.",
+          status_h2: "Digital accessibility status",
+          status_p1: "The website is partially compliant with digital accessibility requirements. This statement was prepared on the basis of a self-assessment and a review of the main website templates.",
+          status_p2: "The partially compliant status results from the fact that some materials and project services are developed gradually, and selected documents, multimedia or embedded third-party content may require additional adaptation.",
+          issues_h2: "Inaccessible or partially inaccessible content",
+          issues_1: "Some downloadable materials, especially presentations and PDF files, may not be fully prepared in accordance with accessibility requirements.",
+          issues_2: "Embedded content or links to external services such as LinkedIn, Facebook, YouTube or partner websites may have limitations outside COVE Polska's control.",
+          issues_3: "Some project subdomains are developed independently and may require a separate accessibility review.",
+          issues_4: "Older graphics or promotional materials may require alternative text or a text version.",
+          dates_h2: "Publication and update dates",
+          publication_date_label: "Website publication date:",
+          declaration_date_label: "Statement preparation date:",
+          review_date_label: "Last statement review date:",
+          keyboard_h2: "Keyboard shortcuts",
+          keyboard_p: "The website does not use custom keyboard shortcuts. Users can use the standard shortcuts of their browser and operating system.",
+          feedback_h2: "Feedback and contact details",
+          feedback_p1: "Problems with the digital accessibility of the website, subdomains or project materials can be reported to the COVE Polska activity coordinator.",
+          feedback_p2: "In your report, please provide your name, contact details, the address of the page or material concerned, a description of the problem and the preferred way of receiving a response or an alternative version of the content.",
+          requests_h2: "Handling accessibility requests and complaints",
+          requests_p1: "We will respond without undue delay, no later than within 7 days. If accessibility or alternative access cannot be provided within that time, we will explain the reason for the delay and provide a new date.",
+          requests_p2: "If the response is not satisfactory, you may contact the COVE Polska team again. In the case of public entities, users may also use complaint procedures provided by law, including contacting the Polish Commissioner for Human Rights.",
+          architecture_h2: "Architectural and communication accessibility",
+          architecture_p1: "Contact office of COVE Polska: Lower Silesian Chamber of Crafts in Wrocław, Plac Solny 13, 50-061 Wrocław.",
+          architecture_p2: "Before an in-person visit, please contact us by email or phone. This will allow us to confirm the accessibility of the meeting place and prepare an appropriate form of contact or support.",
+          footer_note: "Co-funded by the European Union. Views and opinions expressed are those of the authors only and do not necessarily reflect those of the European Union or EACEA.",
+          footer_accessibility: "Accessibility statement"
+        }
+      };
+
+      const LANG_STORAGE_KEY = "covePolskaLang";
+
+      function getSavedLang() {
+        try {
+          const stored = localStorage.getItem(LANG_STORAGE_KEY);
+          return stored === "en" || stored === "pl" ? stored : "pl";
+        } catch (error) {
+          return "pl";
+        }
+      }
+
+      function setLang(lang, persist = true) {
+        document.documentElement.setAttribute("lang", lang);
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.dataset.i18n;
+          if (I18N[lang][key]) el.textContent = I18N[lang][key];
+        });
+        document.getElementById("btn-pl").classList.toggle("active", lang === "pl");
+        document.getElementById("btn-en").classList.toggle("active", lang === "en");
+        document.getElementById("btn-pl").setAttribute("aria-pressed", lang === "pl");
+        document.getElementById("btn-en").setAttribute("aria-pressed", lang === "en");
+        const src = lang === "pl" ? `${base}assets/wroclaw-miasto-spotkan.png` : `${base}assets/wroclaw-meeting-place-better.png`;
+        const alt = lang === "pl" ? "Wrocław Miasto Spotkań" : "Wrocław the Meeting Place";
+        document.querySelectorAll("#wroclaw-logo-footer").forEach((img) => {
+          img.src = src;
+          img.alt = alt;
+        });
+        const euHeader = document.getElementById("eu-logo-header");
+        const euFooter = document.getElementById("eu-logo-footer");
+        const euSrc = lang === "pl" ? `${base}assets/PL_Co-fundedbytheEU_RGB_POS.png` : `${base}assets/EN_Co-fundedbytheEU_RGB_POS.png`;
+        if (euHeader) {
+          euHeader.src = euSrc;
+          euHeader.alt = lang === "pl" ? "Dofinansowane przez Unię Europejską" : "Co-funded by the European Union";
+        }
+        if (euFooter) {
+          euFooter.src = euSrc;
+          euFooter.alt = lang === "pl" ? "Współfinansowane przez Unię Europejską" : "Co-funded by the European Union";
+        }
+        if (persist) {
+          try {
+            localStorage.setItem(LANG_STORAGE_KEY, lang);
+          } catch (error) {}
+        }
+      }
+
+      document.getElementById("btn-pl").addEventListener("click", () => setLang("pl"));
+      document.getElementById("btn-en").addEventListener("click", () => setLang("en"));
+      setLang(getSavedLang(), false);
+      document.getElementById("hamburger-btn").addEventListener("click", () => {
+        const nav = document.getElementById("mobile-nav");
+        const isOpen = nav.classList.toggle("open");
+        document.getElementById("hamburger-btn").setAttribute("aria-expanded", isOpen);
+      });
+    </script>
+  </body>
+</html>

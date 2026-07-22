@@ -199,6 +199,9 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <p data-i18n="footer_note">
           Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autorów i niekoniecznie odzwierciedlają stanowisko Unii Europejskiej lub Europejskiej Agencji Wykonawczej ds. Edukacji i Kultury (EACEA).
         </p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href={`${base}deklaracja-dostepnosci/`} data-i18n="footer_accessibility">Deklaracja dostępności</a>
+        </nav>
       </div>
     </footer>
 
@@ -214,7 +217,8 @@ const base = import.meta.env.BASE_URL.endsWith("/")
           offer_h1: "COVE Polska – przestrzeń wiedzy, innowacji i rozwoju",
           offer_lead: "Poznaj praktyczne zasoby przygotowane w ramach działań COVE Polska i WIN4SMEs. Wybierz obszar, który Cię interesuje: sztuczna inteligencja, innowacje w MŚP, mentoring nauczycieli, firma treningowa Taniroda albo trening umiejętności życiowych.",
           button_visit: "Przejdź do strony",
-          footer_note: "Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autorów i niekoniecznie odzwierciedlają stanowisko Unii Europejskiej lub Europejskiej Agencji Wykonawczej ds. Edukacji i Kultury (EACEA)."
+          footer_note: "Współfinansowane przez Unię Europejską. Wyrażone poglądy i opinie są wyłącznie poglądami autorów i niekoniecznie odzwierciedlają stanowisko Unii Europejskiej lub Europejskiej Agencji Wykonawczej ds. Edukacji i Kultury (EACEA).",
+          footer_accessibility: "Deklaracja dostępności"
         },
         en: {
           nav_about: "About project",
@@ -226,7 +230,8 @@ const base = import.meta.env.BASE_URL.endsWith("/")
           offer_h1: "COVE Polska – knowledge, innovation and development",
           offer_lead: "Explore practical resources prepared as part of COVE Polska and WIN4SMEs activities. Choose the area that interests you: artificial intelligence, SME innovation, teacher mentoring, the Taniroda training company or life skills training.",
           button_visit: "Visit website",
-          footer_note: "Co-funded by the European Union. Views and opinions expressed are those of the authors only and do not necessarily reflect those of the European Union or EACEA."
+          footer_note: "Co-funded by the European Union. Views and opinions expressed are those of the authors only and do not necessarily reflect those of the European Union or EACEA.",
+          footer_accessibility: "Accessibility statement"
         }
       };
 

@@ -640,6 +640,120 @@ h1 {
   text-decoration: underline;
 }
 
+.declaration-section {
+  padding: 2.2rem 0 4.5rem;
+}
+
+.declaration-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.declaration-summary,
+.declaration-card {
+  border: 1px solid rgba(17, 103, 216, 0.11);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.declaration-summary {
+  position: sticky;
+  top: 7.2rem;
+  padding: 1.4rem;
+}
+
+.declaration-summary h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.declaration-summary dl,
+.declaration-summary dd {
+  margin: 0;
+}
+
+.declaration-summary dl {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.declaration-summary dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.declaration-summary dd {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.declaration-summary a {
+  color: var(--blue);
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.declaration-summary a:hover,
+.declaration-card a:hover {
+  color: var(--orange);
+}
+
+.declaration-card {
+  padding: clamp(1.25rem, 3vw, 2.4rem);
+}
+
+.declaration-card section + section {
+  margin-top: 2rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+}
+
+.declaration-card h2 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+}
+
+.declaration-card p {
+  max-width: 850px;
+  margin-bottom: 0.85rem;
+  color: var(--muted);
+}
+
+.declaration-card ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.declaration-card li + li {
+  margin-top: 0.45rem;
+}
+
+.declaration-card a {
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.contact-inline {
+  display: inline-flex;
+  margin: 0.4rem 0 0.8rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--blue-soft);
+}
+
+.contact-inline p {
+  margin: 0;
+}
+
 .hub-content {
   min-height: 310px;
   padding: clamp(1.25rem, 3vw, 1.75rem);
@@ -765,6 +879,24 @@ h1 {
   font-size: 0.92rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffd8aa;
+}
+
 @media (max-width: 860px) {
   .container {
     width: min(100% - 28px, var(--max-width));
@@ -880,6 +1012,14 @@ h1 {
   .hub-card:last-child:nth-child(odd) .hub-image {
     height: auto;
     aspect-ratio: 16 / 9;
+  }
+
+  .declaration-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .declaration-summary {
+    position: static;
   }
 
   .contact-grid {
@@ -1040,5 +1180,9 @@ h1 {
 
   .site-footer p {
     text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 }

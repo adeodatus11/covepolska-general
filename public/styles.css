@@ -326,6 +326,24 @@ p {
   font-size: 0.84rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffcc00;
+}
+
 @media (max-width: 900px) {
   .header-inner {
     width: min(var(--max-w), calc(100% - 20px));
@@ -504,6 +522,10 @@ p {
 
   .footer-funded {
     text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 
   .site-footer {
