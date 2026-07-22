@@ -771,40 +771,54 @@ h1 {
   }
 
   .header-inner {
+    width: min(var(--max-width), calc(100% - 20px));
     min-height: auto;
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
     align-items: center;
-    gap: 0.75rem;
+    flex-wrap: nowrap;
+    gap: 0.35rem;
   }
 
   .logo-strip {
-    order: 1;
-    flex: 1 0 100%;
+    order: 2;
+    flex: 1 1 auto;
     flex-wrap: nowrap;
-    gap: 0.45rem;
-  }
-
-  .logo-strip img {
-    max-width: 92px;
-    max-height: 40px;
-  }
-
-  #eu-logo-header {
-    max-width: 130px;
+    justify-content: center;
+    gap: 0.28rem;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .logo-divider {
-    height: 28px;
+    display: none;
   }
 
-  .lang-switch {
-    order: 2;
-    margin-left: auto;
+  .logo-strip a:first-child img {
+    max-width: 30px;
+    max-height: 32px;
+  }
+
+  .logo-strip a:nth-of-type(2) img {
+    max-width: 82px;
+    max-height: 32px;
+  }
+
+  #eu-logo-header {
+    max-width: 100px;
+    max-height: 28px;
   }
 
   .hamburger {
-    order: 2;
+    order: 1;
     display: inline-flex;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+  }
+
+  .lang-switch {
+    order: 3;
+    flex: 0 0 auto;
   }
 
   .header-nav {
@@ -847,7 +861,7 @@ h1 {
   }
 
   .hero {
-    padding-top: 3.3rem;
+    padding-top: 2.4rem;
   }
 
   .hub-grid {
@@ -857,6 +871,10 @@ h1 {
   .hub-card:last-child:nth-child(odd) {
     grid-column: auto;
     display: block;
+  }
+
+  .hub-card:last-child:nth-child(odd) .hub-media-link {
+    min-height: auto;
   }
 
   .hub-card:last-child:nth-child(odd) .hub-image {
@@ -886,29 +904,49 @@ h1 {
 
   .hub-content {
     min-height: auto;
+    padding: 1.2rem;
+  }
+
+  .hub-content h2 {
+    font-size: clamp(1.34rem, 7vw, 1.82rem);
+  }
+
+  .hub-content p:not(.hub-eyebrow) {
+    margin-bottom: 1.05rem;
   }
 }
 
 @media (max-width: 520px) {
   .header-inner {
-    width: min(var(--max-width), calc(100% - 20px));
+    width: min(var(--max-width), calc(100% - 16px));
   }
 
   .logo-strip {
-    gap: 0.35rem;
+    gap: 0.22rem;
   }
 
-  .logo-strip img {
-    max-width: 76px;
-    max-height: 34px;
+  .logo-strip a:first-child img {
+    max-width: 27px;
+    max-height: 29px;
+  }
+
+  .logo-strip a:nth-of-type(2) img {
+    max-width: 74px;
+    max-height: 30px;
   }
 
   #eu-logo-header {
-    max-width: 118px;
+    max-width: 92px;
+    max-height: 25px;
+  }
+
+  .hamburger {
+    width: 38px;
+    height: 38px;
   }
 
   .lang-btn {
-    padding: 0.36rem 0.56rem;
+    padding: 0.34rem 0.5rem;
   }
 
   h1 {
@@ -920,7 +958,20 @@ h1 {
   }
 
   .hub-content {
-    padding: 1.15rem;
+    padding: 1rem;
+  }
+
+  .hub-eyebrow {
+    margin-bottom: 0.55rem;
+  }
+
+  .hub-content h2 {
+    margin-bottom: 0.6rem;
+  }
+
+  .button {
+    min-height: 44px;
+    padding: 0.68rem 1rem;
   }
 
   .social-card {
