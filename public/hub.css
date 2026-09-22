@@ -309,6 +309,29 @@ h1 {
   transform: scale(1.035);
 }
 
+/* Keep project logos fully visible, regardless of their original proportions. */
+.hub-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(180px, 22vw, 250px);
+  padding: 1.5rem;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.hub-logo-link .hub-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.hub-card:hover .hub-logo {
+  transform: none;
+}
+
 .contact-section {
   padding: 1.7rem 0 clamp(5rem, 8vw, 7rem);
 }
