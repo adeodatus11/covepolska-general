@@ -1246,3 +1246,15 @@ h1 {
     justify-content: center;
   }
 }
+
+/* Verified project assignment, linked to the material's source. */
+.hub-content .hub-task {
+  margin: 0 0 1rem;
+  font-size: .85rem;
+  line-height: 1.5;
+}
+.hub-task a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
